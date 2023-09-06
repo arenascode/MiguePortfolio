@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style lang="sass">
+      @import url("./src/scss/main.scss");
+    </style>
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <nav id="navBar">
+      <div class="logo">
+        <div class="name">ARENASCODE</div>
+      </div>
+      <div class="navBar_Desktop">
+        <ul class="linksMenu">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Projects</a></li>
+          <li><button class="contactMeBtn">Contact</button></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section id="hero">
+        <div class="heroContent">
+          <div class="heroText">
+            <div class="heroTitle">
+              Miguel Arenas <small>Licenciado en Administración</small>
+              <small>FullStack Web Developer</small>
+            </div>
+            <div class="separator"></div>
+            <div class="body">
+              <p>
+                "I aspire to be part of the change and transformation in the
+                world of technology, driving solutions that improve the quality
+                of life for individuals and society as a whole."
+              </p>
+            </div>
+          </div>
+          <div class="heroCTAs">
+            <button class="projects">Projects</button>
+            <button class="contact">Contact</button>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="about_heading">
+          <h2 class="headingTwo">About</h2>
+          <div class="separator"></div>
+        </div>
+        <div class="about_body">
+          <p>
+            Passionate about continuous learning and determined to make a
+            positive impact in my first IT job.
+          </p>
+          <p>
+            My commitment to personal and professional growth drives me to seek
+            opportunities to expand knowledge and make a meaningful contribution
+            in innovative projects through technical skills, management
+            abilities, and adaptability.
+          </p>
+          <p>
+            Ready to open the door to change and contribute value in the world
+            of technology.
+          </p>
+        </div>
+        <div class="about_techStackList"></div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
