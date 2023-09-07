@@ -243,22 +243,199 @@ body {
       justify-content: center;
       align-items: center;
       // Typography
-        p {
-          margin: 0.5rem;
-          flex: 1 0 0;
-          text-align: center;
-          font-family: Inter;
-          font-size: 1.125rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 1.6rem;
-        }
+      p {
+        margin: 0.5rem;
+        flex: 1 0 0;
+        text-align: center;
+        font-family: Inter;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6rem;
+      }
       // text-align: center;
       // font-family: Inter;
       // font-size: 1.125rem;
       // font-style: normal;
       // font-weight: 400;
       // line-height: normal;
+    }
+    .stack {
+      letter-spacing: 2px;
+    }
+    .separator {
+      width: 12rem;
+      height: 0.05rem;
+      background: var(--color-separator);
+      border: 0.5px #5e5e5e solid;
+    }
+    .about_techStackList {
+      // layout
+      display: flex;
+      align-items: flex-start;
+      gap: 2.5rem;
+      margin-top: 2rem;
+
+      li {
+        //layout
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+        justify-content: center;
+        align-items: center;
+        //style
+        border-radius: 0.625rem;
+        img {
+          width: 45.35px;
+          height: 45.35px;
+        }
+      }
+    }
+  }
+  #projects {
+    //layout
+    display: flex;
+    padding: 1.2rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5625rem;
+    align-self: stretch;
+    margin-top: 12rem;
+    .projects_heading {
+      //layout
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .headingThree {
+        display: flex;
+        padding: 0.625rem;
+        // margin: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        align-self: stretch;
+        //typography
+        text-align: center;
+        font-family: Inter;
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1px;
+      }
+      .separator {
+        //line
+        width: 16.438rem;
+        height: 0.0625rem;
+        background: var(--color-separator);
+        border: 0.5px #5e5e5e solid;
+        margin: auto;
+        margin-bottom: 1rem;
+      }
+    }
+    .projectsGrid {
+      //layout
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      align-self: stretch;
+      .projectsFrame {
+        //layout
+        display: flex;
+        align-items: flex-start;
+        gap: 7.0625rem;
+        align-self: stretch;
+        .projectCard {
+          //layout
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+          flex: 1 0 0;
+          width: 32rem;
+          .cardImg {
+            //layout
+            // height: 15rem;
+            width: 100%;
+            align-self: stretch;
+            img {
+              width: 100%;
+              // height: 100%;
+            }
+          }
+          .cardHeading {
+            display: flex;
+            padding: 0.625rem 0rem;
+            justify-content: center;
+            align-items: center;
+            gap: 0.625rem;
+            align-self: stretch;
+            //typography
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+          .separator {
+            background: var(--color-separator);
+            border: 0.4px #5e5e5e solid;
+            margin: auto;
+            margin-bottom: 1rem;
+            width: 32.09375rem;
+            height: 0.06rem;
+          }
+          .cardBody {
+            display: flex;
+            padding: 0.625rem 0rem;
+            justify-content: center;
+            align-items: center;
+            gap: 0.625rem;
+            align-self: stretch;
+            p {
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              margin: 0;
+            }
+          }
+          .cardTechStackList {
+            // layout
+            display: flex;
+            align-items: flex-start;
+            gap: 2.25rem;
+            padding-left: 0;
+            li {
+              //layout
+              display: flex;
+              flex-direction: column;
+              width: min-content;
+              justify-content: center;
+              align-items: center;
+              //style
+              border-radius: 0.625rem;
+              img {
+                width: 35.35px;
+                height: 35.35px;
+              }
+            }
+          }
+          .cardProjectLinks {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            flex-direction: column;
+            h3 {
+              margin: 0;
+            }
+            .linksProject {
+              display: flex;
+              gap: 1rem; 
+            }
+          }
+        }
+      }
     }
   }
 }
