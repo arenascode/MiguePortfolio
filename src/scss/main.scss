@@ -17,7 +17,7 @@ body {
 @media (min-width: 1200px) {
   #navBar {
     display: flex;
-    padding: 1.8rem 2rem;
+    padding: 1.5rem 2rem;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
@@ -27,6 +27,8 @@ body {
     .logo {
       display: flex;
       align-items: center;
+      // overflow-x: hidden;
+      height: 5rem;
       .name {
         display: flex;
         align-items: center;
@@ -34,6 +36,7 @@ body {
         font-size: 32px;
         letter-spacing: 3px;
         word-wrap: break-word;
+        
       }
     }
     .navBar_Desktop {
@@ -53,6 +56,27 @@ body {
           a {
             text-decoration: none;
             color: var(--color-text);
+            transition: transform 0.3s ease, box-shadow 0.2s ease;
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -2px; /* Controla la distancia de la línea desde el texto */
+              left: 0;
+              width: 100%;
+              height: 2px; /* Grosor de la línea */
+              background-color: var(--color-text);
+              transform: scaleX(0); /* Inicialmente, la línea está oculta */
+              transform-origin: right; /* Hacemos que la transformación comience desde la derecha */
+              transition: transform 0.2s ease; /* Agrega una transición para transform */
+            }
+            &:hover{
+              transform:translateY(-2px);
+              // box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            }
+            &:hover::before{
+              transform: scaleX(1);
+              transform-origin: left;
+            }
           }
           .contactMeBtn {
             display: flex;
@@ -69,6 +93,11 @@ body {
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            &:hover {
+              background-color: var(--color-background);
+              color: var(--color-text);
+              cursor: pointer;
+            }
           }
         }
       }
