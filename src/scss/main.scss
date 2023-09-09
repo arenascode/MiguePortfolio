@@ -36,7 +36,6 @@ body {
         font-size: 32px;
         letter-spacing: 3px;
         word-wrap: break-word;
-        
       }
     }
     .navBar_Desktop {
@@ -69,11 +68,11 @@ body {
               transform-origin: right; /* Hacemos que la transformación comience desde la derecha */
               transition: transform 0.2s ease; /* Agrega una transición para transform */
             }
-            &:hover{
-              transform:translateY(-2px);
+            &:hover {
+              transform: translateY(-2px);
               // box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
             }
-            &:hover::before{
+            &:hover::before {
               transform: scaleX(1);
               transform-origin: left;
             }
@@ -283,12 +282,6 @@ body {
         font-weight: 400;
         line-height: 1.6rem;
       }
-      // text-align: center;
-      // font-family: Inter;
-      // font-size: 1.125rem;
-      // font-style: normal;
-      // font-weight: 400;
-      // line-height: normal;
     }
     .stack {
       letter-spacing: 2px;
@@ -315,6 +308,11 @@ body {
         align-items: center;
         //style
         border-radius: 0.625rem;
+        // transform: scale(1);
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.2);
+        }
         img {
           width: 45.35px;
           height: 45.35px;
@@ -384,12 +382,53 @@ body {
           gap: 0.5rem;
           flex: 1 0 0;
           width: 32rem;
+          position: relative;
+          
+          
           .cardImg {
             //layout
             // height: 15rem;
             width: 100%;
             align-self: stretch;
             border-radius: 10px;
+            .projectHover {
+            // opacity: 1;
+            z-index: 9;
+            position: absolute;
+            top: 16%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            background-color: #081c15a8;
+            color: white;
+            // padding: 50%;
+            opacity: 0;
+            transition: ease-in-out 0.4s;
+            width: 98%;
+            height: 32%;
+            // display: none;
+            // align-content: center;
+            text-align: center;
+          }
+            &:hover .projectHover {
+            display: flex;
+            flex-direction: column;
+            column-gap: 15px;
+            opacity: 1;
+            border-radius: 5px;
+            margin-left: 5px;
+            margin-right: 12px;
+            padding-top: 14.5px;
+            padding-right: 10px;
+            margin-top: 7px;
+            cursor: pointer;
+            width: 97.8%;
+            height: 32%;
+            display: block;
+            position: absolute;
+            top: 16%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+          }
             img {
               width: 100%;
               height: 258px;
@@ -397,6 +436,19 @@ body {
               object-position: top;
               border-radius: 2%;
               // height: 100%;
+            }
+            &:hover .projectHover2 {
+              width: 98.1%
+            }
+            &:hover .projectHover3 {
+              width: 98.2%;
+              height: 31%;
+              margin-top: 0;
+            }
+            &:hover .projectHover4 {
+              width: 98.2%;
+              height: 30%;
+              margin-top: -1px;
             }
           }
           .cardHeading {
@@ -433,6 +485,13 @@ body {
               font-weight: 400;
               line-height: normal;
               margin: 0;
+            }
+          }
+          .lastChildCardBody {
+            height: 11.5rem;
+            align-items: start;
+            p {
+              vertical-align: top;
             }
           }
           .cardTechStackList {

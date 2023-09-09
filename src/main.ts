@@ -10,7 +10,7 @@ const nameLogo: HTMLDivElement = document.querySelector(
 ) as HTMLDivElement;
 let walk: number = 25;
 
-function showShadow(e: MouseEvent): void {
+function showShadow(this: HTMLElement, e: MouseEvent): void {
   const { offsetWidth: width, offsetHeight: height } = navBar;
   let { offsetX: x, offsetY: y } = e;
 
