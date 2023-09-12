@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "name": "back-migue-portfolio",
+  "version": "1.0.0",
+  "description": "this is a little server of my portfolio to receive messages",
+  "main": "./src/server.js",
+  "scripts": {
+    "start:dev": "NODE_ENV='dev' nodemon .",
+    "start:prod": "NODE_ENV='prod' node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.10.1",
+    "nodemailer": "^6.9.5"
+  }
+}
