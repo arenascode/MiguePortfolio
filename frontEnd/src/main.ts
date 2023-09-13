@@ -37,6 +37,56 @@ navBar.addEventListener("mousemove", showShadow);
 
 navBar.addEventListener("mouseleave", removeShadow);
 
+// ** Show Modal in Mobile and Tablet Design **//
+const burguerBtn: HTMLButtonElement = document.querySelector('.menuModalBtn') as HTMLButtonElement
+
+const navMenuMobile: HTMLDivElement = document.querySelector('.navBar_Mobile') as HTMLDivElement
+
+const closeModalBtn: HTMLButtonElement = document.querySelector('.closeModalBtn') as HTMLButtonElement
+
+console.log(closeModalBtn);
+
+
+function showModalMenu(): void {
+  console.log('hello!');
+  navMenuMobile.style.display = 'block'
+  setTimeout(() => {
+  navMenuMobile.style.opacity = '1';
+    
+  }, 10);
+}
+
+function closeModal(): void {
+  console.log(`hiii`);
+  navMenuMobile.style.opacity = '0'
+  setTimeout(() => {
+    navMenuMobile.style.display = 'none'
+  }, 500);
+}
+burguerBtn.addEventListener('click', showModalMenu)
+
+closeModalBtn.addEventListener('click', closeModal)
+
+window.onclick = function (e) {
+  if (e.target == navMenuMobile) {
+    navMenuMobile.style.opacity = '0'
+    setTimeout(() => {
+    navMenuMobile.style.display = "none";
+      
+    }, 500);
+  }
+}
+
+//** fix nav */
+
+// window.onscroll = function () {
+//   if (window.scrollY >= navBar.offsetTop) {
+//     navBar.style.display = 'fixed'
+//     document.body.style.paddingTop = navBar.offsetHeight + 'px'
+//   } else {
+//     document.body.style.paddingTop = '0'
+//   }
+// }
 // ** Send Contact Message to Server **//
 
 const form: HTMLFormElement = document.querySelector("form") as HTMLFormElement;
