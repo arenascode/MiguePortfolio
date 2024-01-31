@@ -41,6 +41,7 @@ body {
     .logo {
       display: flex;
       align-items: center;
+      padding-left: 3px;
       .name {
         display: flex;
         align-items: center;
@@ -545,14 +546,14 @@ body {
     .projectsGrid {
       //layout
       margin-top: 2rem;
-      
       display: grid;
       flex-direction: column;
       align-items: flex-start;
-      gap: 3rem;
+      gap: 1rem;
       align-self: center;
       .projectsFrame {
         //layout
+        max-width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -564,7 +565,7 @@ body {
           align-items: flex-start;
           gap: 0.5rem;
           flex: 1 0 0;
-          width: 30rem;
+          width: 100%;
           position: relative;
 
           .cardImg {
@@ -634,6 +635,7 @@ body {
             }
             .cardProjectLinks {
               display: flex;
+              flex-wrap: wrap;
               align-items: center;
               gap: 1.25rem;
               flex-direction: column;
@@ -670,11 +672,12 @@ body {
             border: 0.4px #5e5e5e solid;
             margin: auto;
             margin-bottom: 1rem;
-            width: 30rem;
+            width: 100%;
             height: 0.06rem;
           }
           .cardBody {
             display: flex;
+            flex-direction: column;
             padding: 0.625rem 0rem;
             justify-content: center;
             align-items: center;
@@ -689,6 +692,7 @@ body {
             }
           }
           .lastChildCardBody {
+            display: none;
             height: 6.5rem;
             align-items: start;
             p {
@@ -699,12 +703,14 @@ body {
             // layout
             display: flex;
             align-items: flex-start;
-            gap: 2.25rem;
+            flex-wrap: wrap;
+            gap: 2rem;
             padding-left: 0;
             li {
               //layout
               display: flex;
               flex-direction: column;
+              flex-wrap: wrap;
               width: min-content;
               justify-content: center;
               align-items: center;
@@ -723,11 +729,11 @@ body {
   #contact {
     // layout
     display: flex;
-    padding: 1.5625rem 3rem;
+    padding: 1.5625rem;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1.5625rem;
-    margin-left:1rem;
     width: 100vw;
     .contact_heading {
       //layout
@@ -887,7 +893,7 @@ body {
   #footer {
     //Layout
     display: flex;
-    padding: 2rem 17.5625rem;
+    padding: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
