@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/MiguePortfolio/',
+  base: 'https://arenascode.github.io/miguePortfolio',
 })
