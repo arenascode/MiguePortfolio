@@ -15,6 +15,10 @@ const nameLogo: HTMLDivElement = document.querySelector(
 let walk: number = 25;
 
 function showShadow(this: HTMLElement, e: MouseEvent): void {
+  console.log(window.innerWidth);
+  
+  if (window.innerWidth <= 800) return;
+
   const { offsetWidth: width, offsetHeight: height } = navBar;
   let { offsetX: x, offsetY: y } = e;
 
@@ -33,6 +37,7 @@ function removeShadow() {
   nameLogo.style.transition = `all 0.3s ease-out`;
   nameLogo.style.removeProperty("text-shadow");
 }
+
 navBar.addEventListener("mousemove", showShadow);
 
 navBar.addEventListener("mouseleave", removeShadow);
@@ -44,11 +49,8 @@ const navMenuMobile: HTMLDivElement = document.querySelector('.navBar_Mobile') a
 
 const closeModalBtn: HTMLButtonElement = document.querySelector('.closeModalBtn') as HTMLButtonElement
 
-console.log(closeModalBtn);
-
 
 function showModalMenu(): void {
-  console.log('hello!');
   navMenuMobile.style.display = 'block'
   setTimeout(() => {
   navMenuMobile.style.opacity = '1';
@@ -57,12 +59,12 @@ function showModalMenu(): void {
 }
 
 function closeModal(): void {
-  console.log(`hiii`);
   navMenuMobile.style.opacity = '0'
   setTimeout(() => {
     navMenuMobile.style.display = 'none'
   }, 500);
 }
+
 burguerBtn.addEventListener('click', showModalMenu)
 
 closeModalBtn.addEventListener('click', closeModal)
