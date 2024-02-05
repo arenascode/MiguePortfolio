@@ -24,18 +24,23 @@ body {
 @media (min-width: 375px) and (max-width: 743px) {
   body {
     padding-top: 80px;
+    background: rgb(58, 180, 177);
+    background: linear-gradient(84deg, rgb(58, 180, 177) 25%, rgb(51, 48, 65) 96%);
+    color: white;
   }
   #navBar {
-    background-color: var(--color-background);
+    background: rgb(58, 180, 177);
+    background: linear-gradient(335deg, rgb(58, 180, 177) 25%, rgb(51, 48, 65) 96%);
     position: fixed;
     top: 0;
     min-width: 100vw;
     display: flex;
-    padding: 1.5rem 0.4rem;
+    padding: 1.5rem 0.7rem;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 3% 3%;
     z-index: 6;
   }
   #navBar .logo {
@@ -226,7 +231,7 @@ body {
     color: var(--color-text);
   }
   #navBar .menuModalBtn {
-    width: 45px;
+    width: 40px;
     background-color: transparent;
     border: none;
     margin: 0.4rem;
@@ -259,7 +264,6 @@ body {
     max-width: 100vw;
   }
   #hero .heroContent .heroText .heroTitle {
-    color: var(--Chinese-Black, #111);
     text-align: center;
     font-family: Inter;
     font-size: 3rem;
@@ -298,7 +302,7 @@ body {
     line-height: 1.6rem;
   }
   #hero .heroContent .heroCTAs {
-    padding: 1.5rem 0.8rem;
+    padding: 1.5rem 2.8rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -847,12 +851,11 @@ body {
     top: 0;
     width: 100vw;
     display: flex;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    gap: 150px;
     z-index: 6;
   }
   #navBar .logo {
@@ -863,7 +866,7 @@ body {
     display: flex;
     align-items: center;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 3px;
     word-wrap: break-word;
   }
@@ -911,7 +914,7 @@ body {
   #navBar .navBar_Desktop .linksMenu li .contactMeBtn {
     display: flex;
     width: 8rem;
-    padding: 0.625rem 2.1875rem;
+    padding: 0.625rem 2rem;
     justify-content: center;
     align-items: center;
     gap: 0.625rem;
@@ -1042,10 +1045,9 @@ body {
     color: var(--color-text);
   }
   #navBar .menuModalBtn {
-    width: 60px;
+    width: 50px;
     background-color: transparent;
     border: none;
-    margin-right: 4rem;
   }
   #navBar .menuModalBtn img {
     width: 100%;
@@ -1233,23 +1235,33 @@ body {
     font-weight: 400;
     line-height: 1.6rem;
   }
-  #about .stack {
+  #about .about_stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .about_stack .stack {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     letter-spacing: 2px;
   }
-  #about .separator {
+  #about .about_stack .separator {
     width: 12rem;
     height: 0.05rem;
     background: var(--color-separator);
     border: 0.5px #5e5e5e solid;
   }
-  #about .about_techStackList {
+  #about .about_stack .about_techStackList {
+    width: 100vw;
     display: flex;
-    align-items: flex-start;
+    margin-top: 3rem;
     gap: 3rem;
-    margin-top: 2rem;
+    padding: 0 2.5rem;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
-  #about .about_techStackList li {
+  #about .about_stack .about_techStackList li {
     display: flex;
     flex-direction: column;
     width: min-content;
@@ -1258,12 +1270,12 @@ body {
     border-radius: 0.625rem;
     transition: transform 0.5s;
   }
-  #about .about_techStackList li:hover {
+  #about .about_stack .about_techStackList li:hover {
     transform: scale(1.2);
   }
-  #about .about_techStackList li img {
-    width: 45.35px;
-    height: 45.35px;
+  #about .about_stack .about_techStackList li img {
+    width: 55px;
+    height: 55px;
   }
   #projects {
     display: flex;
@@ -1272,7 +1284,7 @@ body {
     align-items: center;
     gap: 1.5625rem;
     align-self: stretch;
-    margin-top: 24rem;
+    margin-top: 32rem;
   }
   #projects .projects_heading {
     display: flex;
@@ -1448,7 +1460,7 @@ body {
   #projects .projectsGrid .projectsFrame .projectCard .cardTechStackList {
     display: flex;
     align-items: flex-start;
-    gap: 2.25rem;
+    gap: 4.25rem;
     padding-left: 0;
   }
   #projects .projectsGrid .projectsFrame .projectCard .cardTechStackList li {
@@ -1632,18 +1644,16 @@ body {
 @media (min-width: 1200px) {
   #navBar {
     display: flex;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    gap: 20px;
   }
   #navBar .logo {
     display: flex;
     align-items: center;
-    height: 5rem;
   }
   #navBar .logo .name {
     display: flex;
@@ -1657,7 +1667,6 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-right: 5rem;
   }
   #navBar .navBar_Desktop .linksMenu {
     display: flex;
@@ -1839,11 +1848,11 @@ body {
   }
   #hero {
     display: flex;
-    padding: 1.5625rem 16.875rem;
+    padding: 1.5625rem 6.875rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
+    gap: 3.625rem;
     align-self: stretch;
   }
   #hero .heroText {
@@ -1896,12 +1905,12 @@ body {
   }
   #hero .heroCTAs {
     margin: auto;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     display: flex;
     width: 29.0625rem;
     justify-content: center;
     align-items: center;
-    gap: 3.8125rem;
+    gap: 12rem;
   }
   #hero .heroCTAs a.projects {
     display: flex;
@@ -1968,7 +1977,7 @@ body {
   #about {
     display: flex;
     height: 25.3125rem;
-    padding: 5rem 16.875rem;
+    padding: 2rem 8.875rem;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -2022,22 +2031,33 @@ body {
     font-weight: 400;
     line-height: 1.6rem;
   }
-  #about .stack {
+  #about .about_stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .about_stack .stack {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     letter-spacing: 2px;
   }
-  #about .separator {
+  #about .about_stack .separator {
     width: 12rem;
     height: 0.05rem;
     background: var(--color-separator);
     border: 0.5px #5e5e5e solid;
   }
-  #about .about_techStackList {
+  #about .about_stack .about_techStackList {
+    width: 100vw;
     display: flex;
-    align-items: flex-start;
-    gap: 2.5rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    gap: 3rem;
+    padding: 0 2.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-  #about .about_techStackList li {
+  #about .about_stack .about_techStackList li {
     display: flex;
     flex-direction: column;
     width: min-content;
@@ -2046,21 +2066,21 @@ body {
     border-radius: 0.625rem;
     transition: transform 0.5s;
   }
-  #about .about_techStackList li:hover {
+  #about .about_stack .about_techStackList li:hover {
     transform: scale(1.2);
   }
-  #about .about_techStackList li img {
-    width: 45.35px;
-    height: 45.35px;
+  #about .about_stack .about_techStackList li img {
+    width: 55px;
+    height: 55px;
   }
   #projects {
     display: flex;
-    padding: 1.2rem 2rem;
+    padding: 1rem 2rem;
     flex-direction: column;
     align-items: center;
     gap: 1.5625rem;
     align-self: stretch;
-    margin-top: 12rem;
+    margin-top: 14rem;
   }
   #projects .projects_heading {
     display: flex;
@@ -2094,6 +2114,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 3rem;
     gap: 3rem;
     align-self: stretch;
   }
@@ -2233,6 +2254,7 @@ body {
   }
   #projects .projectsGrid .projectsFrame .projectCard .cardTechStackList {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 2.25rem;
     padding-left: 0;
@@ -2451,7 +2473,7 @@ body {
         </div>
       </div>
       <button class="menuModalBtn">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADsQAAA7EB9YPtSQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJTSURBVHic7d09ixNRGIbhe2YCbhYbv10URHsLQRsVhEX8E4tiZ7WNpYg/wN4PrHexsRULFZS1URaC1isWImqhYkKIH8FYnBGXMdXCzBuT+4KnyEyKB0ISzoHzDkiSJEmSJEmSJEmSJGmqZJXXbeA4sD+gi+r3AVgHBtUbBXAN6AEjM9XpAlfLzxxIvwJ3J6CYaTarQJYBS8AKmkVLBXADOBTdRCH2ZKT//e3RTRSil0c3UKhRDnSiWyhMJwduRbdQmNuQloGrxC9LTLNZYdNGYEHaHOhOQDFTb74CV4Ac/t0KniNtBS+gaTPi71bwt+AukiRJkiRJkiRJkiRJkiRJkiRJkiRJ2orq6eCDwBnSoMhW83VUoyHpdPAT4F31Zhu4U74p+vy6qTdD0mSQNqUW8GgCiplm8xBoFcAlYBnNmiPA+wK4CRwILqMYezOgD8xHN1GIfg78jG6hMD9y4Hl0C4V5UQCfSBPDNXuWC2CDNCz6ZHAZNes65aTQPy4Cr4lfn5p6swFcoFTdCgY4DOwcc13/v8/Am+gSkiRJkiRJkiRJkiRJkiRJkiRJkiRJ2qLq6eATwCKwI6CL6vcFeAysV2/sBh4Qf3bdNJP7wC5IvwDzwDPgGJolHeBUAVwGzgeXUfMWgG4GvAKOBpdRjJcZMADmopsoxCAnTQrVbOrnwFp0C4VZy0jzAdeAPLiMmvULOF0Ab4EecI7xY+M0fUak1d+9zRfPAk/xqSHTnCHpkTGLlMZ947cB+/CZQdNmCHwEvkcXkSRJkiRJkiRJkiRJUo1+A6Kjjc9gRMxWAAAAAElFTkSuQmCC" alt="menuBtn" />
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHrSURBVHic7dxBjkxRGIbh77+dMGARxmjWgBiwDRJz+xAiJAZsg4SONRg0Y2EJzaSlzm/QrSNi2OpGn+cZVk2+5N66Sd2TvAkAAAAAAAAAcNbUnx90927GuJ+qW0kuJbmw9VWcpu9JPqd7L8vysqr2f//y5Abo7vMZ43GqHiRZtr2Srdik+0WW5WFVHSbHN0B3n0/3myQ3Vp3HtrxP1Z2qOjz6pY/xJC7+TG5mjEdJUt29m+4P8difzSZV15eMcT8u/ox2Msa96jE+Jrm89hpWsV89xkGSi2svYRUHS5JeewWr6SXJ17VXsJovS7rfrb2ClXS/re6+evw3cGftPWzVJlXXlqraT/eLtdewZd3Pq+rTr1fB59L9OsmtlWexHXupultVP5YkqarDVN1N97Mkm5XH8e9s0v3018VP/n4cfCVj3EvV7RwdB3tH8H/7lqPj4LdZlldV9WntQQAAAAAAAAAAAAAAwOnQCTz7dAI5oRNIEp3A6ekEohM4O51AdAJnpxM4OZ3AyekETk0ncGo6gVPTCZyaTuCkdAInpBMIAAAAAAAAAAAAAABnlE7g2acTyAmdQJLoBE5PJxCdwNnpBKITODudwMnpBE5OJ3BqOoFT0wmcmk7g1HQCJ6UTOCGdQAAAAAAAAACYzE9HCU27725leAAAAABJRU5ErkJggg==" alt="menuBtn" />
       </button>
     </nav>
     <main>
