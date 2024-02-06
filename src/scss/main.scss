@@ -35,7 +35,7 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 // ** Mobile Design
@@ -1823,11 +1823,11 @@ body {
   #navBar {
     display: flex;
     padding: 1rem 2rem;
-    width: 100vw;
+    max-width: 100vw;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.173);
 
     .logo {
       display: flex;
@@ -2133,7 +2133,7 @@ body {
         font-weight: 400;
         line-height: normal;
         font-style: normal;
-      transition: transform 0.3s ease; /* Agrega una transición para transform */
+        transition: transform 0.3s ease; /* Agrega una transición para transform */
         &:hover {
           background: var(--color-background);
           color: var(--color-background);
@@ -2168,7 +2168,7 @@ body {
         line-height: normal;
         text-decoration: none;
         // transform: scale(1);
-      transition: transform 0.3s ease; /* Agrega una transición para transform */
+        transition: transform 0.3s ease; /* Agrega una transición para transform */
         &:hover {
           background: var(--color-background);
           color: black;
@@ -2188,14 +2188,17 @@ body {
   }
   #about {
     //layout
+    max-width: 100vw;
     display: flex;
-    height: 25.3125rem;
-    padding: 2rem 8.875rem;
+    // height: 25.3125rem;
+    padding: 0 2rem;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     gap: 1rem;
     align-self: stretch;
+    // box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.151);
+
     .about_heading {
       display: flex;
       flex-direction: column;
@@ -2222,15 +2225,14 @@ body {
         //line
         width: 16.438rem;
         height: 0.0625rem;
-        background: var(--color-separator);
-        border: 0.5px #5e5e5e solid;
+        border: 0.5px var(--color-text) solid;
         margin: auto;
         margin-bottom: 1rem;
       }
     }
     .about_body {
       // Layout
-      width: 130%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       padding: 0.625rem;
@@ -2249,9 +2251,15 @@ body {
       }
     }
     .about_stack {
+      width: 100%;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
+      box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
+      margin-bottom: 15px;
+      background: rgba(51, 48, 65, 0.444);
+      border-radius: 7px;
       .stack {
         display: flex;
         flex-direction: column;
@@ -2261,8 +2269,7 @@ body {
       .separator {
         width: 12rem;
         height: 0.05rem;
-        background: var(--color-separator);
-        border: 0.5px #5e5e5e solid;
+        border: 0.5px var(--color-text) solid;
       }
       .about_techStackList {
         // layout
@@ -2270,7 +2277,7 @@ body {
         display: flex;
         margin-top: 3rem;
         gap: 3rem;
-        padding: 0 2.5rem;
+        padding: 0 5rem;
         justify-content: space-between;
         flex-wrap: wrap;
         li {
@@ -2300,13 +2307,16 @@ body {
   }
   #projects {
     //layout
+    // background: var(--color-background);
     display: flex;
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     flex-direction: column;
     align-items: center;
     gap: 1.5625rem;
     align-self: stretch;
-    margin-top: 14rem;
+    margin-top: 0rem;
+    // box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.187);
+
     .projects_heading {
       //layout
       display: flex;
@@ -2333,8 +2343,7 @@ body {
         //line
         width: 16.438rem;
         height: 0.0625rem;
-        background: var(--color-separator);
-        border: 0.5px #5e5e5e solid;
+        border: 0.5px var(--color-text) solid;
         margin: auto;
         margin-bottom: 1rem;
       }
@@ -2358,169 +2367,203 @@ body {
         .projectCard {
           //layout
           display: flex;
-          // flex-direction: column;
+          padding: 15px;
           align-items: flex-start;
           gap: 0.5rem;
           flex: 1 0 0;
           width: 100%;
           position: relative;
+          background: rgba(0, 0, 0, 0.361);
+          backdrop-filter: blur(5px);
+          border-radius: 10px;
+          box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
           .project_imageTitle {
             flex: 1;
             .cardImg {
-            //layout
-            // height: 15rem;
-            width: 100%;
-            align-self: stretch;
-            border-radius: 10px;
-            .projectHover {
-              // opacity: 1;
-              z-index: 9;
-              position: absolute;
-              top: 16%;
-              left: 49%;
-              transform: translate(-50%, -50%);
-              background-color: #081c15a8;
-              color: white;
-              // padding: 50%;
-              opacity: 0;
-              transition: ease-in-out 0.4s;
-              width: 98%;
-              height: 32%;
-              // display: none;
-              // align-content: center;
-              text-align: center;
-            }
-            &:hover .projectHover {
-              display: flex;
-              flex-direction: column;
-              column-gap: 15px;
-              opacity: 1;
-              border-radius: 5px;
-              margin-left: 5px;
-              margin-right: 12px;
-              padding-top: 14.5px;
-              padding-right: 10px;
-              margin-top: 21px;
-              // cursor: pointer;
-              width: 97.8%;
-              height: 36%;
-              display: block;
-              position: absolute;
-              top: 16%;
-              left: 49%;
-              transform: translate(-50%, -50%);
-            }
-            img {
+              //layout
+              // height: 15rem;
               width: 100%;
-              height: 258px;
-              object-fit: cover;
-              object-position: top;
-              border-radius: 2%;
-              // height: 100%;
-            }
-            &:hover .projectHover2 {
-              width: 98.1%;
-            }
-            &:hover .projectHover3 {
-              width: 98.2%;
-              height: 34%;
-              margin-top: 14px;
-            }
-            &:hover .projectHover4 {
-              width: 98.2%;
-              height: 34%;
-              margin-top: 13px;
-            }
-            .cardProjectLinks {
-              display: flex;
-              align-items: center;
-              gap: 1.25rem;
-              flex-direction: column;
-              padding: 4.5rem;
-              h3 {
-                margin: 0.3rem;
-                font-weight: 500;
-                letter-spacing: 1px;
+              align-self: stretch;
+              border-radius: 10px;
+              .projectHover {
+                // opacity: 1;
+                z-index: 9;
+                position: absolute;
+                top: 20%;
+                left: 24%;
+                transform: translate(-50%, -50%);
+                background-color: #081c15a8;
+                color: white;
+                opacity: 0;
+                transition: ease-in-out 0.4s;
+                width: 45.3%;
+                height: 32%;
+                text-align: center;
               }
-              .linksProject {
+              &:hover .projectHover {
                 display: flex;
-                gap: 1.7rem;
-                svg:hover {
-                  cursor: pointer;
+                flex-direction: column;
+                column-gap: 15px;
+                opacity: 1;
+                border-radius: 2%;
+                margin-left: 20px;
+                margin-right: 12px;
+                padding-top: 14.5px;
+                padding-right: 10px;
+                margin-top: 87.5px;
+                // cursor: pointer;
+                width: 45.3%;
+                height: 72%;
+                display: block;
+                position: absolute;
+                top: 16%;
+                left: 22.2%;
+                transform: translate(-50%, -50%);
+              }
+              img {
+                width: 100%;
+                height: 258px;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 2%;
+                // height: 100%;
+              }
+              .projectHover2 {
+                top: 20%;
+                left: 76%;
+              }
+              &:hover .projectHover2 {
+                top: 0;
+                left: 74.3%;
+                width: 45.5%;
+                right: 20%;
+                margin-top:144.5px;
+                height: 52%;
+              }
+              &:hover .projectHover3 {
+                margin-top: 82.5px;
+                width: 45.3%;
+                height: 67%;
+              }
+              .projectHover4 {
+                top: 20%;
+                left: 76%;
+              }
+              &:hover .projectHover4 {
+                top: 0;
+                left: 74.3%;
+                width: 45.5%;
+                right: 20%;
+                margin-top:144.5px;
+                height: 68.6%;
+              }
+              .cardProjectLinks {
+                display: flex;
+                align-items: center;
+                gap: 1.25rem;
+                flex-direction: column;
+                padding: 4.5rem;
+                h3 {
+                  margin: 0.3rem;
+                  font-weight: 500;
+                  letter-spacing: 1px;
+                }
+                .linksProject {
+                  display: flex;
+                  gap: 1.7rem;
+                  svg:hover {
+                    cursor: pointer;
+                  }
                 }
               }
             }
-          }
-          .cardHeading {
-            display: flex;
-            padding: 0.625rem 0rem;
-            justify-content: center;
-            align-items: center;
-            gap: 0.625rem;
-            align-self: stretch;
-            //typography
-            font-size: 1.5rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-          .separator {
-            background: var(--color-separator);
-            border: 0.4px #5e5e5e solid;
-            margin: auto;
-            margin-bottom: 1rem;
-            width: 32.09375rem;
-            height: 0.06rem;
-          }
+            .cardHeading {
+              display: flex;
+              padding: 0.625rem 0rem;
+              justify-content: center;
+              align-items: center;
+              gap: 0.625rem;
+              align-items: center;
+              //typography
+              font-size: 1.5rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              text-wrap: pretty;
+            }
+            .separator {
+              border: 0.4px var(--color-text) solid;
+              margin: auto;
+              margin-bottom: 1rem;
+              width: 32.09375rem;
+              height: 0.06rem;
+            }
           }
           .project_textContent {
             width: 100%;
-            padding-left: 1rem;
+            padding: 0 1rem;
             .cardBody {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.625rem;
-            align-self: stretch;
-            p {
-              font-size: 1.125rem;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal;
-              margin: 0;
-              text-wrap: pretty;
-            }
-          }
-          .lastChildCardBody {
-            height: 11.5rem;
-            align-items: start;
-            p {
-              vertical-align: top;
-            }
-          }
-          .cardTechStackList {
-            // layout
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            gap: 2.25rem;
-            padding-left: 0;
-            width: max-content;
-            li {
-              //layout
               display: flex;
               flex-direction: column;
-              width: min-content;
               justify-content: center;
               align-items: center;
-              //style
-              border-radius: 0.625rem;
-              img {
-                width: 35.35px;
-                height: 35.35px;
+              gap: 0.625rem;
+              align-self: stretch;
+              ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                li {
+                  list-style: circle;
+                  font-size: 1.125rem;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 25px;
+                  margin: 0;
+                  text-wrap: pretty;
+                }
+              }
+
+              p {
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 25px;
+                margin: 0;
+                text-wrap: pretty;
               }
             }
-          }
+            .lastChildCardBody {
+              height: 11.5rem;
+              align-items: start;
+              p {
+                vertical-align: top;
+              }
+            }
+            .cardTechStackList {
+              // layout
+              display: flex;
+              flex-wrap: wrap;
+              align-items: flex-start;
+              gap: 2.25rem;
+              padding-left: 0;
+              width: max-content;
+              li {
+                //layout
+                display: flex;
+                flex-direction: column;
+                width: min-content;
+                justify-content: center;
+                align-items: center;
+                //style
+                border-radius: 0.625rem;
+                font-weight: 600;
+                img {
+                  width: 35.35px;
+                  height: 35.35px;
+                }
+              }
+            }
           }
           &:nth-child(even) {
             flex-direction: row-reverse;
