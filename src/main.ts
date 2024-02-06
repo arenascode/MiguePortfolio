@@ -119,21 +119,21 @@ if (form instanceof HTMLFormElement) {
         toast.addEventListener("mouseleave", Swal.resumeTimer);
       },
     });
-
-    fetch('http://localhost:8080/api/form', {
-      method: 'POST',
+    console.log(dataToSend);
+    
+    fetch("https://arenascode-portfolio-be.onrender.com/api/form", {
+      method: "POST",
       body: JSON.stringify(dataToSend),
-      headers: { 'content-type': 'application/json' }
+      headers: { "content-type": "application/json" },
     })
-      .then(res => {
+      .then((res) => {
         if (res.status == 200) {
           Toast.fire({
             icon: "success",
-            title:
-              "Gracias Por Tu Mensaje! En Breve Me comunicaré contigo",
+            title: "Gracias Por Tu Mensaje! En Breve Me comunicaré contigo",
           });
-          form.reset()
-        } else if (res.status == 400){
+          form.reset();
+        } else if (res.status == 400) {
           res.json().then((data) => {
             Toast.fire({
               icon: "error",
@@ -142,7 +142,7 @@ if (form instanceof HTMLFormElement) {
               timerProgressBar: false,
               showConfirmButton: true,
             });
-          })
+          });
         } else if (res.status == 500) {
           res.json().then((data) => {
             Toast.fire({
@@ -154,7 +154,8 @@ if (form instanceof HTMLFormElement) {
             });
           });
         }
-      }).catch(err => {
+      })
+      .catch((err) => {
         console.log(err);
         Toast.fire({
           icon: "error",
@@ -163,6 +164,6 @@ if (form instanceof HTMLFormElement) {
           timerProgressBar: false,
           showConfirmButton: true,
         });
-      })
+      });
   });
 }

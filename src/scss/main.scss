@@ -2347,23 +2347,26 @@ body {
       padding-top: 3rem;
       gap: 3rem;
       align-self: stretch;
+      width: 100%;
       .projectsFrame {
         //layout
         display: flex;
+        flex-direction: column;
         align-items: flex-start;
-        gap: 7.0625rem;
+        gap: 3rem;
         align-self: stretch;
         .projectCard {
           //layout
           display: flex;
-          flex-direction: column;
+          // flex-direction: column;
           align-items: flex-start;
           gap: 0.5rem;
           flex: 1 0 0;
-          width: 32rem;
+          width: 100%;
           position: relative;
-
-          .cardImg {
+          .project_imageTitle {
+            flex: 1;
+            .cardImg {
             //layout
             // height: 15rem;
             width: 100%;
@@ -2469,9 +2472,12 @@ body {
             width: 32.09375rem;
             height: 0.06rem;
           }
-          .cardBody {
+          }
+          .project_textContent {
+            width: 100%;
+            padding-left: 1rem;
+            .cardBody {
             display: flex;
-            padding: 0.625rem 0rem;
             justify-content: center;
             align-items: center;
             gap: 0.625rem;
@@ -2482,6 +2488,7 @@ body {
               font-weight: 400;
               line-height: normal;
               margin: 0;
+              text-wrap: pretty;
             }
           }
           .lastChildCardBody {
@@ -2498,6 +2505,7 @@ body {
             align-items: flex-start;
             gap: 2.25rem;
             padding-left: 0;
+            width: max-content;
             li {
               //layout
               display: flex;
@@ -2512,6 +2520,10 @@ body {
                 height: 35.35px;
               }
             }
+          }
+          }
+          &:nth-child(even) {
+            flex-direction: row-reverse;
           }
         }
       }
