@@ -17,13 +17,13 @@
     rgba(51, 48, 65, 1) 92%
   );
   //Fonts
-  --Font-family: "Inter", sans-serif;
+  --Font-Inter: "Inter", sans-serif;
 }
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: var(--Font-family);
+  font-family: var(--Font-Inter);
   background: rgb(51, 48, 65);
   background: linear-gradient(
     324deg,
@@ -35,6 +35,7 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  letter-spacing: 1px;
   // overflow-x: hidden;
   // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bd197', endColorstr='#6cc2f0', GradientType=1 );
 }
@@ -2280,7 +2281,7 @@ body {
         gap: 3rem;
         padding: 0 5rem;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         li {
           //layout
           display: flex;
@@ -2374,12 +2375,13 @@ body {
           flex: 1 0 0;
           width: 100%;
           position: relative;
-          background: rgba(0, 0, 0, 0.361);
+          background: rgba(0, 0, 0, 0.396);
           backdrop-filter: blur(5px);
           border-radius: 10px;
           box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
-          .project_imageTitle {
+          .projectCard_img {
             width: 60%;
+            padding: 1rem;
             .cardImg {
               //layout
               // height: 15rem;
@@ -2981,15 +2983,19 @@ body {
                 height: 341px;
                 position: absolute;
                 top: 15px;
-                
+
                 object-fit: inherit;
                 border-radius: 0;
                 object-position: center;
               }
             }
+          }
+          .project_textContent {
+            width: 430px;
+            padding: 1rem;
             .cardHeading {
               display: flex;
-              padding: 0.625rem 0rem;
+              padding: 0.5rem 0rem;
               justify-content: center;
               align-items: center;
               gap: 0.625rem;
@@ -3005,19 +3011,15 @@ body {
               border: 0.4px var(--color-text) solid;
               margin: auto;
               margin-bottom: 1rem;
-              width: 32.09375rem;
+              width: 20rem;
               height: 0.06rem;
             }
-          }
-          .project_textContent {
-            width: 430px;
-            padding: 1rem;
             .cardBody {
               display: flex;
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              gap: 0.625rem;
+              margin-top: 2rem;
 
               // ul {
               //   display: flex;
@@ -3034,11 +3036,10 @@ body {
               //   }
               // }
               p {
-                font-size: 1.125rem;
+                // font-size: 1rem;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 25px;
-                margin: 0;
                 text-wrap: pretty;
               }
             }
@@ -3049,26 +3050,29 @@ body {
                 vertical-align: top;
               }
             }
-            .cardTechStackList {
-              // layout
-              display: flex;
-              flex-wrap: wrap;
-              align-items: flex-start;
-              gap: 2.25rem;
-              padding-left: 0;
-              li {
-                //layout
+            .cardTechStack {
+              display: none;
+              .cardTechStack_list {
+                // layout
                 display: flex;
-                flex-direction: column;
-                width: min-content;
-                justify-content: center;
-                align-items: center;
-                //style
-                border-radius: 0.625rem;
-                font-weight: 600;
-                img {
-                  width: 35.35px;
-                  height: 35.35px;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                gap: 2.25rem;
+                padding-left: 0;
+                li {
+                  //layout
+                  display: flex;
+                  flex-direction: column;
+                  width: min-content;
+                  justify-content: center;
+                  align-items: center;
+                  //style
+                  border-radius: 0.625rem;
+                  font-weight: 600;
+                  img {
+                    width: 35.35px;
+                    height: 35.35px;
+                  }
                 }
               }
             }
