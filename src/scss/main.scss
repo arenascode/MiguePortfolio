@@ -2260,7 +2260,7 @@ body {
       align-items: center;
       box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
       margin-bottom: 15px;
-      background: rgba(51, 48, 65, 0.444);
+      background: rgba(51, 48, 65, 0.54);
       border-radius: 7px;
       .stack {
         display: flex;
@@ -2317,7 +2317,6 @@ body {
     gap: 1.5625rem;
     align-self: stretch;
     margin-top: 0rem;
-    // box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.187);
 
     .projects_heading {
       //layout
@@ -2389,8 +2388,6 @@ body {
               align-self: stretch;
               border-radius: 10px;
               .projectHover {
-                // opacity: 1;
-                // display: none;
                 z-index: 9;
                 position: absolute;
                 top: 20%;
@@ -2404,27 +2401,26 @@ body {
                 height: 32%;
                 text-align: center;
               }
-              // &:hover .projectHover {
-              //   // layout
-              //   display: flex;
-              //   flex-direction: column;
-              //   column-gap: 15px;
-              //   opacity: 1;
-              //   // border-radius: 2%;
-              //   margin-left: 83px;
-              //   margin-right: 12px;
-              //   padding-top: 14.5px;
-              //   padding-right: 10px;
-              //   margin-top: 130px;
-              //   // cursor: pointer;
-              //   width: 48.4%;
-              //   height: 74%;
-              //   display: block;
-              //   position: absolute;
-              //   top: 16%;
-              //   left: 22.2%;
-              //   transform: translate(-50%, -50%);
-              // }
+              &:hover .projectHover {
+                // layout
+                flex-direction: column;
+                column-gap: 15px;
+                opacity: 1;
+                border-radius: 2%;
+                margin-left: 83px;
+                margin-right: 12px;
+                padding-top: 14.5px;
+                padding-right: 10px;
+                margin-top: 130px;
+                // cursor: pointer;
+                width: 48.4%;
+                height: 74%;
+                display: none;
+                position: absolute;
+                top: 16%;
+                left: 22.2%;
+                transform: translate(-50%, -50%);
+              }
               img {
                 width: 100%;
                 height: 258px;
@@ -2562,9 +2558,9 @@ body {
                 position: relative;
                 top: 19px;
                 left: 23px;
-                box-shadow: 0px 0px 2px 0px;
+                border-radius: 2px 2px 0px 0px;
+                box-shadow: 0px 0px 2px 0px; 
               }
-
               .apple {
                 background-color: #474747;
                 width: 9px;
@@ -2819,6 +2815,7 @@ body {
                 );
                 // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#787878', GradientType=0);
               }
+              //*DOCK
               .dock {
                 display: flex;
                 justify-content: space-around;
@@ -2834,10 +2831,9 @@ body {
                 border-top-left-radius: 4px;
                 background-color: rgba(255, 255, 255, 0.731);
                 z-index: 9;
+                
                 //* To change size of iconds in DOCk
                 .dock_imgContainer {
-                  // padding: 1px 2px;
-                  // background: white;
                   height: 35px;
                   width: 35px;
                   border-radius: 10%;
@@ -2855,6 +2851,360 @@ body {
                     opacity: 1;
                     z-index: 10;
                     object-fit: fill;
+                  }
+                
+                }
+
+                @keyframes softJump {
+
+                  0% {
+                    transform: translateY(0)
+                  }
+                  // 12% {
+                  //   transform: translateY(1px);
+                  // }
+                  25% {
+                    transform: translateY(1px)
+                  }
+                  37% {
+                    transform: translateY(2px);
+                  }
+                  50%{
+                    transform: translateY(3px);
+                  }
+                  63%{
+                    transform: translateY(-1px);
+                  }
+                  75% {
+                    transform: translateY(-2px)
+                  }
+                  // 87%{
+                  //   transform: translateY(-3px);
+                  // }
+                  100%{
+                    transform: translateY(-3px);
+                  }
+                }
+                .softJumps {
+                  animation: softJump 0.6s ease-in-out;
+                }
+                .html::before {
+                  display: none;
+                  content: "HTML";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -11%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .html::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .css::before {
+                  display: none;
+                  content: "CSS";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -2%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .css::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .js::before {
+                  display: none;
+                  content: "JavaScript";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -51%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .js::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .ts::before {
+                  display: none;
+                  content: "TypeScript";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -51%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .ts::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .react::before {
+                  display: none;
+                  content: "ReactJs";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -51%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .react::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .nodeJs::before {
+                  display: none;
+                  content: "NodeJs";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -51%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .nodeJs::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .bootstrap::before {
+                  display: none;
+                  content: "Bootstrap";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -51%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .bootstrap::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .tailwind::before {
+                  display: none;
+                  content: "Tailwind";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -51%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .tailwind::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .github::before {
+                  display: none;
+                  content: "GitHub";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -26%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .github::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .mongoDb::before {
+                  display: none;
+                  content: "MongoDB";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -26%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .mongoDb::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .stripe::before {
+                  display: none;
+                  content: "Stripe";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.835);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -26%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .stripe::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .projectPage::before {
+                  display: none;
+                  content: "Take a look!";
+                  font-size: 12px;
+                  background: rgba(151, 151, 151, 0.848);
+                  padding: 4px;
+                  border-radius: 2px;
+                  margin-bottom: 3px;
+                  position: absolute;
+                  top: -63%;
+                  left: -73%;
+                  transition: transform 0.3s ease;
+                  width: max-content;
+                }
+                .projectPage::after {
+                  display: none;
+                  content: "";
+                  position: absolute;
+                  left: 6.7%;
+                  top: -13%;
+                  // transform: translateX(-50%);
+                  transform: rotate(180deg);
+                  border-width: 8px;
+                  border-style: solid;
+                }
+                .dock_imgContainer:hover {
+                  transition: transform 0.2s ease-in-out;
+                  transform: translateY(-10px);
+                  &::before {
+                    display: block;
+                    top: -90%;
+                    background: rgba(255, 255, 255, 0.731);
+                    color: rgb(0, 0, 0);
+                    font-weight: 500;
+                    // left: -11%;
+                  }
+                  &::after {
+                    display: block;
+                    top: -26%;
+                    left: 28%;
+                    border-color: transparent transparent
+                      rgba(255, 255, 255, 0.731) transparent;
                   }
                 }
               }
@@ -2983,7 +3333,7 @@ body {
                 height: 341px;
                 position: absolute;
                 top: 15px;
-
+                // filter: opacity(0.9);
                 object-fit: inherit;
                 border-radius: 0;
                 object-position: center;
@@ -3240,7 +3590,7 @@ body {
           font-weight: 400;
           line-height: normal;
           &:hover {
-            background-color: var(--color-background);
+            background: var(--color-background);
             color: var(--color-text);
             cursor: pointer;
           }

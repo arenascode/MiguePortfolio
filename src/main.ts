@@ -1,4 +1,4 @@
-import Swal from "sweetalert2"
+import Swal from "sweetalert2";
 
 //** Shadow effect in Logo **//
 
@@ -16,7 +16,7 @@ let walk: number = 25;
 
 function showShadow(this: HTMLElement, e: MouseEvent): void {
   console.log(window.innerWidth);
-  
+
   if (window.innerWidth <= 800) return;
 
   const { offsetWidth: width, offsetHeight: height } = navBar;
@@ -43,41 +43,45 @@ navBar.addEventListener("mousemove", showShadow);
 navBar.addEventListener("mouseleave", removeShadow);
 
 // ** Show Modal in Mobile and Tablet Design **//
-const burguerBtn: HTMLButtonElement = document.querySelector('.menuModalBtn') as HTMLButtonElement
 
-const navMenuMobile: HTMLDivElement = document.querySelector('.navBar_Mobile') as HTMLDivElement
+const burguerBtn: HTMLButtonElement = document.querySelector(
+  ".menuModalBtn"
+) as HTMLButtonElement;
 
-const closeModalBtn: HTMLButtonElement = document.querySelector('.closeModalBtn') as HTMLButtonElement
+const navMenuMobile: HTMLDivElement = document.querySelector(
+  ".navBar_Mobile"
+) as HTMLDivElement;
 
+const closeModalBtn: HTMLButtonElement = document.querySelector(
+  ".closeModalBtn"
+) as HTMLButtonElement;
 
 function showModalMenu(): void {
-  navMenuMobile.style.display = 'block'
+  navMenuMobile.style.display = "block";
   setTimeout(() => {
-  navMenuMobile.style.opacity = '1';
-    
+    navMenuMobile.style.opacity = "1";
   }, 10);
 }
 
 function closeModal(): void {
-  navMenuMobile.style.opacity = '0'
+  navMenuMobile.style.opacity = "0";
   setTimeout(() => {
-    navMenuMobile.style.display = 'none'
+    navMenuMobile.style.display = "none";
   }, 500);
 }
 
-burguerBtn.addEventListener('click', showModalMenu)
+burguerBtn.addEventListener("click", showModalMenu);
 
-closeModalBtn.addEventListener('click', closeModal)
+closeModalBtn.addEventListener("click", closeModal);
 
 window.onclick = function (e) {
   if (e.target == navMenuMobile) {
-    navMenuMobile.style.opacity = '0'
+    navMenuMobile.style.opacity = "0";
     setTimeout(() => {
-    navMenuMobile.style.display = "none";
-      
+      navMenuMobile.style.display = "none";
     }, 500);
   }
-}
+};
 
 //** fix nav */
 
@@ -94,20 +98,19 @@ window.onclick = function (e) {
 const form: HTMLFormElement = document.querySelector("form") as HTMLFormElement;
 
 if (form instanceof HTMLFormElement) {
-
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const dataForm = new FormData(form);
     const name = dataForm.get("name");
-    const email = dataForm.get("email")
-    const message = dataForm.get("message")
+    const email = dataForm.get("email");
+    const message = dataForm.get("message");
 
     const dataToSend = {
       name,
       email,
-      message
-    }
-    
+      message,
+    };
+
     // ** SweetAlert Config
     const Toast = Swal.mixin({
       toast: true,
@@ -120,7 +123,7 @@ if (form instanceof HTMLFormElement) {
       },
     });
     console.log(dataToSend);
-    
+
     fetch("https://arenascode-portfolio-be.onrender.com/api/form", {
       method: "POST",
       body: JSON.stringify(dataToSend),
@@ -167,3 +170,25 @@ if (form instanceof HTMLFormElement) {
       });
   });
 }
+
+//* Give softJumps to icons in dock of a mac screen *//
+
+const dockImgs: NodeList = document.querySelectorAll(".dock_imgContainer");
+
+function handleAppJumps(e: Event) {
+  e.preventDefault();
+  for (let i = 0; i <= 8; i++) {
+    console.log(`holiii`);
+    const imgContainer: HTMLDivElement = this;
+    const redirectUrl = imgContainer.querySelector('a')?.getAttribute('href') as string
+    imgContainer.classList.add("softJumps");
+    setTimeout(() => {
+      imgContainer.classList.remove("softJumps");
+      window.open(redirectUrl, '_blank')
+    }, 700);
+  }
+}
+
+dockImgs.forEach((dockImg) =>
+  dockImg.addEventListener("click", handleAppJumps)
+);
