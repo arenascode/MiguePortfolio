@@ -1306,7 +1306,7 @@ body {
     display: flex;
     // display: none;
     height: 25.3125rem;
-    padding: 5rem 8rem;
+    padding: 3rem;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -1367,6 +1367,10 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
+      background: rgba(51, 48, 65, 0.54);
+      border-radius: 7px;
+      max-width: 100%;
       .stack {
         display: flex;
         flex-direction: column;
@@ -1386,7 +1390,7 @@ body {
         margin-top: 3rem;
         gap: 3rem;
         padding: 0 2.5rem;
-        // justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         li {
           //layout
@@ -1416,12 +1420,13 @@ body {
   #projects {
     //layout
     display: flex;
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 1rem;
     flex-direction: column;
     align-items: center;
     gap: 1.5625rem;
     align-self: stretch;
     margin-top: 32rem;
+    width: 100vw;
     .projects_heading {
       //layout
       display: flex;
@@ -1456,178 +1461,385 @@ body {
     }
     .projectsGrid {
       //layout
+      width: 100%;
       margin-top: 2rem;
       display: grid;
-      place-content: center;
+      // place-content: center;
       flex-direction: column;
       align-items: flex-start;
-      gap: 3rem;
+      gap: 2rem;
       align-self: stretch;
       .projectsFrame {
         //layout
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 4rem;
+        gap: 2rem;
         align-self: stretch;
+        width: 100%;
         .projectCard {
           //layout
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           align-items: flex-start;
           gap: 0.5rem;
           flex: 1 0 0;
-          width: 36rem;
+          width: 100%;
           position: relative;
-
-          .cardImg {
-            //layout
-            // height: 15rem;
-            width: 100%;
-            align-self: stretch;
-            border-radius: 10px;
-            .projectHover {
-              // opacity: 1;
-              // z-index: 9;
-              position: absolute;
-              top: 16%;
-              left: 49%;
-              transform: translate(-50%, -50%);
-              background-color: #081c15a8;
-              color: white;
-              // padding: 50%;
-              opacity: 0;
-              transition: ease-in-out 0.4s;
-              width: 98%;
-              height: 32%;
-              // display: none;
-              // align-content: center;
-              text-align: center;
-            }
-            &:hover .projectHover {
-              display: flex;
-              flex-direction: column;
-              column-gap: 15px;
-              opacity: 1;
-              border-radius: 5px;
-              margin-left: 5px;
-              margin-right: 12px;
-              padding-top: 14.5px;
-              padding-right: 10px;
-              margin-top: 25px;
-              // cursor: pointer;
-              width: 97.8%;
-              height: 37%;
-              display: block;
-              position: absolute;
-              top: 16%;
-              left: 49%;
-              transform: translate(-50%, -50%);
-            }
-            img {
+          background: rgba(0, 0, 0, 0.396);
+          border-radius: 10px;
+          box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
+          padding: 1rem 1rem 0 1rem;
+          .projectCard_img {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            width: 20rem;       
+            .cardImg {
+              //layout
+              // height: 15rem;
               width: 100%;
-              height: 258px;
-              object-fit: cover;
-              object-position: top;
-              border-radius: 2%;
-              // height: 100%;
-            }
-            &:hover .projectHover2 {
-              width: 98.5%;
-            }
-            &:hover .projectHover3 {
-              width: 98.5%;
-              height: 35%;
-              margin-top: 16.5px;
-            }
-            &:hover .projectHover4 {
-              width: 98.6%;
-              height: 38%;
-              margin-top: 24px;
-            }
-            .cardProjectLinks {
-              display: flex;
-              align-items: center;
-              gap: 1.25rem;
-              flex-direction: column;
-              padding: 4.5rem;
-              h3 {
-                margin: 0.3rem;
-                font-weight: 500;
-                letter-spacing: 1px;
+              align-self: stretch;
+              border-radius: 10px;
+              // .projectHover {
+              //   // opacity: 1;
+              //   // z-index: 9;
+              //   position: absolute;
+              //   top: 16%;
+              //   left: 49%;
+              //   transform: translate(-50%, -50%);
+              //   background-color: #081c15a8;
+              //   color: white;
+              //   // padding: 50%;
+              //   opacity: 0;
+              //   transition: ease-in-out 0.4s;
+              //   width: 98%;
+              //   height: 32%;
+              //   // display: none;
+              //   // align-content: center;
+              //   text-align: center;
+              // }
+              // &:hover .projectHover {
+              //   display: flex;
+              //   flex-direction: column;
+              //   column-gap: 15px;
+              //   opacity: 1;
+              //   border-radius: 5px;
+              //   margin-left: 5px;
+              //   margin-right: 12px;
+              //   padding-top: 14.5px;
+              //   padding-right: 10px;
+              //   margin-top: 25px;
+              //   // cursor: pointer;
+              //   width: 97.8%;
+              //   height: 37%;
+              //   display: block;
+              //   position: absolute;
+              //   top: 16%;
+              //   left: 49%;
+              //   transform: translate(-50%, -50%);
+              // }
+              img {
+                width: 100%;
+                height: 258px;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 2%;
+                // height: 100%;
               }
-              .linksProject {
+              &:hover .projectHover2 {
+                width: 98.5%;
+              }
+              &:hover .projectHover3 {
+                width: 98.5%;
+                height: 35%;
+                margin-top: 16.5px;
+              }
+              &:hover .projectHover4 {
+                width: 98.6%;
+                height: 38%;
+                margin-top: 24px;
+              }
+              .cardProjectLinks {
                 display: flex;
-                gap: 1.7rem;
-                svg:hover {
-                  cursor: pointer;
+                align-items: center;
+                gap: 3rem;
+                flex-direction: column;
+                padding: 8.5rem 4rem;
+                h3 {
+                  margin: 0.3rem;
+                  font-weight: 500;
+                  letter-spacing: 1px;
+                }
+                .linksProject {
+                  display: flex;
+                  gap: 2.5rem;
+                  svg:hover {
+                    cursor: pointer;
+                  }
+                }
+              }
+              .mac-screen {
+                display: none;
+                .dock {
+                  display: none;
+                  .dock_imgContainer {
+                    display: none;
+                  }
+                }
+              }
+              //* Mobile Design*//
+              .containerIphone {
+                
+                .iphone-border {
+                  margin: auto;
+                  width: 300px;
+                  height: 500px;
+                  border-radius: 36px;
+                  background-color: #000;
+                  position: relative;
+                  overflow: hidden;
+                  margin-bottom: 15px;
+                  .screen {
+                  position: relative;
+                  display: inline-block;
+                  overflow: hidden;
+                  width: 95.5%;
+                  height: 97%;
+                  border-radius: 34px;
+                  padding-left: 15px;
+                  padding-right: 3px;
+                  padding-top: 14.5px;
+                  z-index: 2;
+                  img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    border-radius: 28px;
+                  }
+                  .projectDescription {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #081c15a8;
+                    color: white;
+                    // padding: 50%;
+                    opacity: 0;
+                    transition: ease-in-out 0.5s;
+                    width: 93%;
+                    height: 97%;
+                    // display: none;
+                    // align-content: center;
+                    text-align: center;
+                    .card-title {
+                      font-weight: 800;
+                      letter-spacing: 1px;
+                      margin-top: 25px;
+                      text-decoration: underline;
+                    }
+                    .card-text {
+                      display: flex;
+                      flex-direction: column;
+                      gap: 20px;
+                      margin-top: 50px;
+                      margin-left: 20px;
+                      text-align: left;
+                      font-weight: 600;
+                      letter-spacing: 1px;
+                    }
+                    .builtWith_title {
+                     
+                      margin-top: 50px;
+                      margin-left: 20px;
+                      text-align: left;
+                      font-weight: 700;
+                    }
+                    .builtWith {
+                      margin-left: 20px;
+                      margin-top: 20px;
+                      display: flex;
+                      gap: 30px;
+                      img {
+                        width: 30px;
+                        height: 30px;
+                      }
+                    }
+                    .btn-project {
+                      margin-top: 60px;
+                      font-weight: 500;
+                      letter-spacing: 1px;
+                    }
+                  }
+                  &:hover .projectDescription {
+                    display: flex;
+                    flex-direction: column;
+                    column-gap: 15px;
+                    opacity: 1;
+                    border-radius: 28px;
+                    margin-left: 5.8px;
+                    margin-right: 12px;
+                    padding-top: 14.5px;
+                    padding-right: 10px;
+                    margin-top: 7px;
+                    cursor: pointer;
+                    width: 93.5%;
+                    height: 97%;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                }
+                .screenProject2 {
+                  // @extend .screen;
+                  position: relative;
+                  overflow: hidden;
+                  width: 97%;
+                  height: 97%;
+                  border-radius: 38px;
+                  margin-top: 1px;
+                  padding-right: 6.5px;
+                  margin-right: 5px;
+                  // padding-top: 12px;
+                  padding-bottom: 1.5px;
+
+                  .btn-project {
+                    width: fit-content;
+                    margin-top: 55px;
+                  }
+                  &:hover .projectDescription2 {
+                    column-gap: 15px;
+                    opacity: 1;
+                    border-radius: 28px;
+                    margin-left: 5px;
+                    margin-right: 14px;
+                    padding-top: 14px;
+                    padding-right: 9px;
+                  }
+                }
+                .screenProject3 {
+                  @extend .screenProject2;
+                  padding-top: 13.5px;
+                  .card-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-top: 50px;
+                    margin-left: 20px;
+                    // text-align: cen;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                  }
+                  .btn-project {
+                    margin-top: 90px;
+                  }
+                }
+                }
+                .iphone-border::before {
+                  content: "";
+                  position: absolute;
+                  top: 12px;
+                  left: 12px;
+                  right: 12px;
+                  bottom: 12px;
+                  border: 3px solid #666;
+                  border-radius: 30px;
+                  box-sizing: border-box;
+                  z-index: 1;
+                }
+                .iphone-border::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 12px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 60px;
+                  height: 6px;
+                  background-color: #666;
+                  border-radius: 3px;
+                  z-index: 3;
+                }
+                
+              }
+            }
+          }
+          .project_textContent {
+            flex: 2;
+            width: 10rem;
+            padding: 1rem 1rem 0 1rem;
+            .cardHeading {
+              display: flex;
+              padding: 0.625rem 0rem;
+              justify-content: center;
+              align-items: center;
+              gap: 0.625rem;
+              align-self: stretch;
+              //typography
+              font-size: 1.5rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+            .separator {
+              
+              border: 0.4px var(--color-separator) solid;
+              margin: auto;
+              margin-bottom: 1rem;
+              width: 20rem;
+              height: 0.06rem;
+            }
+            .cardBody {
+              display: flex;
+              flex-direction: column;
+              padding: 0.625rem 0rem;
+              justify-content: center;
+              align-items: center;
+              gap: 0.625rem;
+              align-self: stretch;
+              p {
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 0;
+                text-wrap: pretty;
+              }
+            }
+            // .lastChildCardBody {
+            //   height: 6.5rem;
+            //   align-items: start;
+            //   p {
+            //     vertical-align: top;
+            //   }
+            // }
+            .cardTechStack_list {
+              // layout
+              display: flex;
+              align-items: flex-start;
+              gap: 1rem;
+              padding-left: 0;
+            flex-wrap: wrap;
+              li {
+                //layout
+                display: flex;
+                flex-direction: column;
+                width: min-content;
+                justify-content: center;
+                align-items: center;
+                //style
+                border-radius: 0.625rem;
+                img {
+                  width: 35.35px;
+                  height: 35.35px;
                 }
               }
             }
           }
-          .cardHeading {
-            display: flex;
-            padding: 0.625rem 0rem;
-            justify-content: center;
-            align-items: center;
-            gap: 0.625rem;
-            align-self: stretch;
-            //typography
-            font-size: 1.5rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-          }
-          .separator {
-            background: var(--color-separator);
-            border: 0.4px #5e5e5e solid;
-            margin: auto;
-            margin-bottom: 1rem;
-            width: 32.09375rem;
-            height: 0.06rem;
-          }
-          .cardBody {
-            display: flex;
-            padding: 0.625rem 0rem;
-            justify-content: center;
-            align-items: center;
-            gap: 0.625rem;
-            align-self: stretch;
-            p {
-              font-size: 1.125rem;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal;
-              margin: 0;
-            }
-          }
-          .lastChildCardBody {
-            height: 6.5rem;
-            align-items: start;
-            p {
-              vertical-align: top;
-            }
-          }
-          .cardTechStackList {
-            // layout
-            display: flex;
-            align-items: flex-start;
-            gap: 2.5rem;
-            padding-left: 0;
-            li {
-              //layout
-              display: flex;
-              flex-direction: column;
-              width: min-content;
-              justify-content: center;
-              align-items: center;
-              //style
-              border-radius: 0.625rem;
-              img {
-                width: 35.35px;
-                height: 35.35px;
-              }
-            }
+          &:nth-child(even) {
+            flex-direction: row-reverse;
           }
         }
       }
@@ -2258,8 +2470,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
       margin-bottom: 15px;
+      box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
       background: rgba(51, 48, 65, 0.54);
       border-radius: 7px;
       .stack {
@@ -2387,40 +2599,7 @@ body {
               width: 100%;
               align-self: stretch;
               border-radius: 10px;
-              .projectHover {
-                z-index: 9;
-                position: absolute;
-                top: 20%;
-                left: 29%;
-                transform: translate(-50%, -50%);
-                background-color: #081c15a8;
-                color: white;
-                opacity: 0;
-                transition: ease-in-out 0.3s;
-                width: 45.3%;
-                height: 32%;
-                text-align: center;
-              }
-              &:hover .projectHover {
-                // layout
-                flex-direction: column;
-                column-gap: 15px;
-                opacity: 1;
-                border-radius: 2%;
-                margin-left: 83px;
-                margin-right: 12px;
-                padding-top: 14.5px;
-                padding-right: 10px;
-                margin-top: 130px;
-                // cursor: pointer;
-                width: 48.4%;
-                height: 74%;
-                display: none;
-                position: absolute;
-                top: 16%;
-                left: 22.2%;
-                transform: translate(-50%, -50%);
-              }
+              
               img {
                 width: 100%;
                 height: 258px;
@@ -2428,38 +2607,6 @@ body {
                 object-position: top;
                 border-radius: 2%;
                 // height: 100%;
-              }
-              // * Project 2
-              .projectHover2 {
-                top: 20%;
-                left: 76%;
-              }
-              &:hover .projectHover2 {
-                top: 0;
-                left: 74.3%;
-                width: 45.5%;
-                right: 20%;
-                margin-top: 144.5px;
-                height: 52%;
-              }
-              // * Project 3
-              &:hover .projectHover3 {
-                margin-top: 82.5px;
-                width: 45.3%;
-                height: 67%;
-              }
-              // * Project 4
-              .projectHover4 {
-                top: 20%;
-                left: 76%;
-              }
-              &:hover .projectHover4 {
-                top: 0;
-                left: 74.3%;
-                width: 45.5%;
-                right: 20%;
-                margin-top: 144.5px;
-                height: 68.6%;
               }
               .cardProjectLinks {
                 display: flex;
@@ -2494,206 +2641,646 @@ body {
                 border-top: 3px solid silver;
                 border-right: 3px solid silver;
                 border-left: 3px solid silver;
-              }
+                .bar {
+                  width: 547px;
+                  height: 15px;
+                  background-color: whitesmoke;
+                  color: var(--color-bg-btn);
+                  position: relative;
+                  top: 19px;
+                  left: 23px;
+                  border-radius: 2px 2px 0px 0px;
+                  box-shadow: 0px 0px 2px 0px;
+                  .apple {
+                    background-color: #474747;
+                    width: 9px;
+                    height: 9px;
+                    position: relative;
+                    top: 4px;
+                    left: 5px;
+                    border-radius: 100%;
+                    .apple2 {
+                      background-color: whitesmoke;
+                      width: 4px;
+                      height: 2px;
+                      position: relative;
+                      top: 7.9px;
+                      left: 2.3px;
+                      border-radius: 100%;
+                    }
 
-              .camera {
-                width: 7px;
-                height: 7px;
-                border-radius: 100%;
-                position: relative;
-                top: -10px;
-                margin: 0 auto;
-                background: rgba(28, 28, 28, 1);
-                background: -moz-linear-gradient(
-                  45deg,
-                  rgba(28, 28, 28, 1) 0%,
-                  rgba(51, 51, 51, 1) 39%,
-                  rgba(43, 43, 43, 1) 76%,
-                  rgba(19, 19, 19, 1) 100%
-                );
-                background: -webkit-gradient(
-                  left bottom,
-                  right top,
-                  color-stop(0%, rgba(28, 28, 28, 1)),
-                  color-stop(39%, rgba(51, 51, 51, 1)),
-                  color-stop(76%, rgba(43, 43, 43, 1)),
-                  color-stop(100%, rgba(19, 19, 19, 1))
-                );
-                background: -webkit-linear-gradient(
-                  45deg,
-                  rgba(28, 28, 28, 1) 0%,
-                  rgba(51, 51, 51, 1) 39%,
-                  rgba(43, 43, 43, 1) 76%,
-                  rgba(19, 19, 19, 1) 100%
-                );
-                background: -o-linear-gradient(
-                  45deg,
-                  rgba(28, 28, 28, 1) 0%,
-                  rgba(51, 51, 51, 1) 39%,
-                  rgba(43, 43, 43, 1) 76%,
-                  rgba(19, 19, 19, 1) 100%
-                );
-                background: -ms-linear-gradient(
-                  45deg,
-                  rgba(28, 28, 28, 1) 0%,
-                  rgba(51, 51, 51, 1) 39%,
-                  rgba(43, 43, 43, 1) 76%,
-                  rgba(19, 19, 19, 1) 100%
-                );
-                background: linear-gradient(
-                  45deg,
-                  rgba(28, 28, 28, 1) 0%,
-                  rgba(51, 51, 51, 1) 39%,
-                  rgba(43, 43, 43, 1) 76%,
-                  rgba(19, 19, 19, 1) 100%
-                );
-                // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1c1c1c', endColorstr='#131313', GradientType=1);
-              }
+                    .apple3 {
+                      background-color: whitesmoke;
+                      width: 4px;
+                      height: 4.8px;
+                      position: absolute;
+                      left: 7.2px;
+                      top: 1.2px;
+                      border-radius: 100%;
+                    }
 
-              .bar {
-                width: 547px;
-                height: 15px;
-                background-color: whitesmoke;
-                color: var(--color-bg-btn);
-                position: relative;
-                top: 19px;
-                left: 23px;
-                border-radius: 2px 2px 0px 0px;
-                box-shadow: 0px 0px 2px 0px; 
-              }
-              .apple {
-                background-color: #474747;
-                width: 9px;
-                height: 9px;
-                position: relative;
-                top: 4px;
-                left: 5px;
-                border-radius: 100%;
-              }
+                    .apple4 {
+                      background-color: whitesmoke;
+                      width: 4.6px;
+                      height: 4px;
+                      position: absolute;
+                      left: 1.6px;
+                      top: -2.5px;
+                      border-bottom-right-radius: 90%;
+                      border-bottom-left-radius: 90%;
+                    }
+                    .apple-leaf {
+                      background-color: #474747;
+                      width: 1.1px;
+                      height: 3.9px;
+                      transform: rotate(45deg);
+                      position: relative;
+                      top: -5px;
+                      left: 4.5px;
+                      border-radius: 100%;
+                    }
+                    .apple-selection {
+                      width: 15px;
+                      height: 14px;
+                      background-color: rgba(204, 0, 102, 0);
+                      position: absolute;
+                      top: -4px;
+                      left: -4px;
+                    }
+                    //* paste here
+                    .search1 {
+                      background-color: rgba(204, 0, 102, 0);
+                      border: 1.5px solid #474747;
+                      width: 7px;
+                      height: 7px;
+                      border-radius: 100%;
+                      position: relative;
+                      top: -26px;
+                      left: 500px;
+                    }
 
-              .apple2 {
-                background-color: whitesmoke;
-                width: 4px;
-                height: 2px;
-                position: relative;
-                top: 7.9px;
-                left: 2.3px;
-                border-radius: 100%;
+                    .search2 {
+                      width: 1.3px;
+                      height: 6px;
+                      background-color: #474747;
+                      position: relative;
+                      top: -28px;
+                      left: 508px;
+                      transform: rotate(135deg);
+                    }
+
+                    .dash1 {
+                      width: 12px;
+                      height: 1px;
+                      background-color: #474747;
+                      position: relative;
+                      top: -39px;
+                      left: 520px;
+                    }
+
+                    .dash2 {
+                      width: 9px;
+                      height: 1px;
+                      background-color: #474747;
+                      position: relative;
+                      top: -37px;
+                      left: 520px;
+                    }
+
+                    .dash3 {
+                      width: 12px;
+                      height: 1px;
+                      background-color: #474747;
+                      position: relative;
+                      top: -35px;
+                      left: 520px;
+                    }
+
+                    .battery {
+                      width: 17px;
+                      height: 9px;
+                      background-color: rgba(204, 0, 102, 0);
+                      border: 1px solid #474747;
+                      position: relative;
+                      top: -41.5px;
+                      left: 445px;
+                      border-top-left-radius: 2px;
+                      border-top-right-radius: 2px;
+                      border-bottom-left-radius: 2px;
+                      border-bottom-right-radius: 2px;
+                    }
+
+                    .battery-inside {
+                      width: 15px;
+                      height: 5.5px;
+                      background-color: #474747;
+                      position: absolute;
+                      top: 1.5px;
+                      left: 446px;
+                      border-top-left-radius: 2px;
+                      border-top-right-radius: 2px;
+                      border-bottom-left-radius: 2px;
+                      border-bottom-right-radius: 2px;
+                      border-bottom: 0.5px solid #474747;
+                    }
+
+                    .battery-tip {
+                      background-color: #474747;
+                      width: 2.3px;
+                      height: 6px;
+                      border-bottom-right-radius: 50px;
+                      border-top-right-radius: 50px;
+                      position: relative;
+                      top: -49px;
+                      left: 462.5px;
+                    }
+
+                    .battery-perc {
+                      font-family: "Roboto", sans-serif;
+                      font-size: 9px;
+                      position: absolute;
+                      background-color: whitesmoke;
+                      top: -0.9px;
+                      left: 414px;
+                    }
+
+                    .time-os {
+                      background-color: whitesmoke;
+                      color: #474747;
+                      display: inline;
+                      margin: 0 auto;
+                      font-size: 11px;
+                      position: relative;
+                      top: -14px;
+                      left: 470px;
+                      font-family: "Roboto", sans-serif;
+                    }
+                  }
+                  .menu {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 9px;
+                    position: absolute;
+                    word-spacing: 8px;
+                    top: 3px;
+                    left: 25px;
+                    background-color: whitesmoke;
+                  }
+                  //*DOCK
+                  .dock {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 13px 0 15px;
+                    width: 100%;
+                    height: 45px;
+                    background-color: whitesmoke;
+                    position: absolute;
+                    top: 313.5px;
+                    // left: 85px;
+                    border-top-right-radius: 4px;
+                    border-top-left-radius: 4px;
+                    background-color: rgba(255, 255, 255, 0.731);
+                    z-index: 9;
+
+                    //* To change size of iconds in DOCk
+                    .dock_imgContainer {
+                      height: 35px;
+                      width: 35px;
+                      border-radius: 10%;
+                      transition: transform 0.3s ease;
+                      z-index: 99;
+                      &:hover {
+                        transform: translateY(-10px);
+                        cursor: pointer;
+                        z-index: 99;
+                      }
+                      .img-size {
+                        // padding-top: 1px;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 1;
+                        z-index: 10;
+                        object-fit: fill;
+                      }
+                    }
+
+                    @keyframes softJump {
+                      0% {
+                        transform: translateY(0);
+                      }
+                      // 12% {
+                      //   transform: translateY(1px);
+                      // }
+                      25% {
+                        transform: translateY(1px);
+                      }
+                      37% {
+                        transform: translateY(2px);
+                      }
+                      50% {
+                        transform: translateY(3px);
+                      }
+                      63% {
+                        transform: translateY(-1px);
+                      }
+                      75% {
+                        transform: translateY(-2px);
+                      }
+                      // 87%{
+                      //   transform: translateY(-3px);
+                      // }
+                      100% {
+                        transform: translateY(-3px);
+                      }
+                    }
+                    .softJumps {
+                      animation: softJump 0.6s ease-in-out;
+                    }
+                    .html::before {
+                      display: none;
+                      content: "HTML";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -11%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .html::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .css::before {
+                      display: none;
+                      content: "CSS";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -2%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .css::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .js::before {
+                      display: none;
+                      content: "JavaScript";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -51%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .js::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .ts::before {
+                      display: none;
+                      content: "TypeScript";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -51%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .ts::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .react::before {
+                      display: none;
+                      content: "ReactJs";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -51%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .react::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .nodeJs::before {
+                      display: none;
+                      content: "NodeJs";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -51%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .nodeJs::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .bootstrap::before {
+                      display: none;
+                      content: "Bootstrap";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -51%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .bootstrap::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .tailwind::before {
+                      display: none;
+                      content: "Tailwind";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -51%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .tailwind::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .github::before {
+                      display: none;
+                      content: "GitHub";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -26%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .github::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .mongoDb::before {
+                      display: none;
+                      content: "MongoDB";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -26%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .mongoDb::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .stripe::before {
+                      display: none;
+                      content: "Stripe";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.835);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -26%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .stripe::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .projectPage::before {
+                      display: none;
+                      content: "Take a look!";
+                      font-size: 12px;
+                      background: rgba(151, 151, 151, 0.848);
+                      padding: 4px;
+                      border-radius: 2px;
+                      margin-bottom: 3px;
+                      position: absolute;
+                      top: -63%;
+                      left: -73%;
+                      transition: transform 0.3s ease;
+                      width: max-content;
+                    }
+                    .projectPage::after {
+                      display: none;
+                      content: "";
+                      position: absolute;
+                      left: 6.7%;
+                      top: -13%;
+                      // transform: translateX(-50%);
+                      transform: rotate(180deg);
+                      border-width: 8px;
+                      border-style: solid;
+                    }
+                    .dock_imgContainer:hover {
+                      transition: transform 0.2s ease-in-out;
+                      transform: translateY(-10px);
+                      &::before {
+                        display: block;
+                        top: -90%;
+                        background: rgba(255, 255, 255, 0.731);
+                        color: rgb(0, 0, 0);
+                        font-weight: 500;
+                        // left: -11%;
+                      }
+                      &::after {
+                        display: block;
+                        top: -26%;
+                        left: 28%;
+                        border-color: transparent transparent
+                          rgba(255, 255, 255, 0.731) transparent;
+                      }
+                    }
+                  }
+                  .safari-window {
+                    width: 547px;
+                    height: 341px;
+                    position: absolute;
+                    top: 15px;
+                    // filter: opacity(0.9);
+                    object-fit: inherit;
+                    border-radius: 0;
+                    object-position: center;
+                  }
+                }
+                .camera {
+                  width: 7px;
+                  height: 7px;
+                  border-radius: 100%;
+                  position: relative;
+                  top: -10px;
+                  margin: 0 auto;
+                  background: rgba(28, 28, 28, 1);
+                  background: -moz-linear-gradient(
+                    45deg,
+                    rgba(28, 28, 28, 1) 0%,
+                    rgba(51, 51, 51, 1) 39%,
+                    rgba(43, 43, 43, 1) 76%,
+                    rgba(19, 19, 19, 1) 100%
+                  );
+                  background: -webkit-gradient(
+                    left bottom,
+                    right top,
+                    color-stop(0%, rgba(28, 28, 28, 1)),
+                    color-stop(39%, rgba(51, 51, 51, 1)),
+                    color-stop(76%, rgba(43, 43, 43, 1)),
+                    color-stop(100%, rgba(19, 19, 19, 1))
+                  );
+                  background: -webkit-linear-gradient(
+                    45deg,
+                    rgba(28, 28, 28, 1) 0%,
+                    rgba(51, 51, 51, 1) 39%,
+                    rgba(43, 43, 43, 1) 76%,
+                    rgba(19, 19, 19, 1) 100%
+                  );
+                  background: -o-linear-gradient(
+                    45deg,
+                    rgba(28, 28, 28, 1) 0%,
+                    rgba(51, 51, 51, 1) 39%,
+                    rgba(43, 43, 43, 1) 76%,
+                    rgba(19, 19, 19, 1) 100%
+                  );
+                  background: -ms-linear-gradient(
+                    45deg,
+                    rgba(28, 28, 28, 1) 0%,
+                    rgba(51, 51, 51, 1) 39%,
+                    rgba(43, 43, 43, 1) 76%,
+                    rgba(19, 19, 19, 1) 100%
+                  );
+                  background: linear-gradient(
+                    45deg,
+                    rgba(28, 28, 28, 1) 0%,
+                    rgba(51, 51, 51, 1) 39%,
+                    rgba(43, 43, 43, 1) 76%,
+                    rgba(19, 19, 19, 1) 100%
+                  );
+                  // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1c1c1c', endColorstr='#131313', GradientType=1);
+                }
               }
-
-              .apple3 {
-                background-color: whitesmoke;
-                width: 4px;
-                height: 4.8px;
-                position: absolute;
-                left: 7.2px;
-                top: 1.2px;
-                border-radius: 100%;
-              }
-
-              .apple4 {
-                background-color: whitesmoke;
-                width: 4.6px;
-                height: 4px;
-                position: absolute;
-                left: 1.6px;
-                top: -2.5px;
-                border-bottom-right-radius: 90%;
-                border-bottom-left-radius: 90%;
-              }
-
-              .apple-leaf {
-                background-color: #474747;
-                width: 1.1px;
-                height: 3.9px;
-                transform: rotate(45deg);
-                position: relative;
-                top: -5px;
-                left: 4.5px;
-                border-radius: 100%;
-              }
-
-              .apple-selection {
-                width: 15px;
-                height: 14px;
-                background-color: rgba(204, 0, 102, 0);
-                position: absolute;
-                top: -4px;
-                left: -4px;
-              }
-
-              /* OUT OF ORDER, for now.
-.apple-selection:active {
-  background-color: #106fdc;
-  border-bottom: 1px solid #106fdc;
-} */
-
-              .box {
-                background-color: #171717;
-                border: 4px solid whitesmoke;
-                border-top: 30px solid whitesmoke;
-                border-right: 20px solid whitesmoke;
-                border-top-right-radius: 6px;
-                border-top-left-radius: 6px;
-                width: 420px;
-                height: 200px;
-                margin: 100px auto;
-              }
-
-              .red-c {
-                background-color: rgb(250, 97, 89);
-                width: 15px;
-                height: 15px;
-                border-radius: 100%;
-                display: inline-block;
-              }
-
-              .red-c:active {
-                box-shadow: inset 0px 0 3px 1px #404040;
-              }
-
-              .yellow-c {
-                background-color: rgb(253, 188, 62);
-                width: 15px;
-                height: 15px;
-                border-radius: 100%;
-                display: inline-block;
-                margin-left: -6px;
-              }
-
-              .yellow-c:active {
-                box-shadow: inset 0px 0 5px 1px #404040;
-              }
-
-              .green-c {
-                background-color: rgb(50, 202, 81);
-                width: 15px;
-                height: 15px;
-                border-radius: 100%;
-                display: inline-block;
-                margin-left: -6px;
-              }
-
-              .green-c:active {
-                box-shadow: inset 0px 0 5px 1px #404040;
-              }
-
-              .circles {
-                display: inline-block;
-                position: relative;
-                top: -23.9px;
-                left: 1px;
-                background-color: whitesmoke;
-              }
-
-              p {
-                background-color: #171717;
-                color: whitesmoke;
-                text-align: center;
-                margin: 30px auto;
-                font-size: 13px;
-              }
-
               .mac-body {
                 width: 650px;
                 height: 20px;
@@ -2766,577 +3353,58 @@ body {
                 border-bottom-right-radius: 25px;
                 border-bottom: 9px solid #737373;
                 box-shadow: 1px 1px 3px 0px;
-              }
-
-              .lid {
-                width: 120px;
-                height: 10px;
-                background-color: red;
-                margin: 0 auto;
-                border-bottom-right-radius: 20px;
-                border-bottom-left-radius: 20px;
-                background: rgba(234, 234, 234, 1);
-                background: -moz-linear-gradient(
-                  top,
-                  rgba(234, 234, 234, 1) 0%,
-                  rgba(186, 186, 186, 1) 77%,
-                  rgba(120, 120, 120, 1) 100%
-                );
-                background: -webkit-gradient(
-                  left top,
-                  left bottom,
-                  color-stop(0%, rgba(234, 234, 234, 1)),
-                  color-stop(77%, rgba(186, 186, 186, 1)),
-                  color-stop(100%, rgba(120, 120, 120, 1))
-                );
-                background: -webkit-linear-gradient(
-                  top,
-                  rgba(234, 234, 234, 1) 0%,
-                  rgba(186, 186, 186, 1) 77%,
-                  rgba(120, 120, 120, 1) 100%
-                );
-                background: -o-linear-gradient(
-                  top,
-                  rgba(234, 234, 234, 1) 0%,
-                  rgba(186, 186, 186, 1) 77%,
-                  rgba(120, 120, 120, 1) 100%
-                );
-                background: -ms-linear-gradient(
-                  top,
-                  rgba(234, 234, 234, 1) 0%,
-                  rgba(186, 186, 186, 1) 77%,
-                  rgba(120, 120, 120, 1) 100%
-                );
-                background: linear-gradient(
-                  to bottom,
-                  rgba(234, 234, 234, 1) 0%,
-                  rgba(186, 186, 186, 1) 77%,
-                  rgba(120, 120, 120, 1) 100%
-                );
-                // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#787878', GradientType=0);
-              }
-              //*DOCK
-              .dock {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                padding: 13px 0 15px;
-                width: 100%;
-                height: 45px;
-                background-color: whitesmoke;
-                position: absolute;
-                top: 313.5px;
-                // left: 85px;
-                border-top-right-radius: 4px;
-                border-top-left-radius: 4px;
-                background-color: rgba(255, 255, 255, 0.731);
-                z-index: 9;
-                
-                //* To change size of iconds in DOCk
-                .dock_imgContainer {
-                  height: 35px;
-                  width: 35px;
-                  border-radius: 10%;
-                  transition: transform 0.3s ease;
-                  z-index: 99;
-                  &:hover {
-                    transform: translateY(-10px);
-                    cursor: pointer;
-                    z-index: 99;
-                  }
-                  .img-size {
-                    // padding-top: 1px;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 1;
-                    z-index: 10;
-                    object-fit: fill;
-                  }
-                
-                }
-
-                @keyframes softJump {
-
-                  0% {
-                    transform: translateY(0)
-                  }
-                  // 12% {
-                  //   transform: translateY(1px);
-                  // }
-                  25% {
-                    transform: translateY(1px)
-                  }
-                  37% {
-                    transform: translateY(2px);
-                  }
-                  50%{
-                    transform: translateY(3px);
-                  }
-                  63%{
-                    transform: translateY(-1px);
-                  }
-                  75% {
-                    transform: translateY(-2px)
-                  }
-                  // 87%{
-                  //   transform: translateY(-3px);
-                  // }
-                  100%{
-                    transform: translateY(-3px);
-                  }
-                }
-                .softJumps {
-                  animation: softJump 0.6s ease-in-out;
-                }
-                .html::before {
-                  display: none;
-                  content: "HTML";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -11%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .html::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .css::before {
-                  display: none;
-                  content: "CSS";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -2%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .css::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .js::before {
-                  display: none;
-                  content: "JavaScript";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -51%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .js::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .ts::before {
-                  display: none;
-                  content: "TypeScript";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -51%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .ts::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .react::before {
-                  display: none;
-                  content: "ReactJs";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -51%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .react::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .nodeJs::before {
-                  display: none;
-                  content: "NodeJs";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -51%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .nodeJs::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .bootstrap::before {
-                  display: none;
-                  content: "Bootstrap";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -51%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .bootstrap::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .tailwind::before {
-                  display: none;
-                  content: "Tailwind";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -51%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .tailwind::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .github::before {
-                  display: none;
-                  content: "GitHub";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -26%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .github::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .mongoDb::before {
-                  display: none;
-                  content: "MongoDB";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -26%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .mongoDb::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .stripe::before {
-                  display: none;
-                  content: "Stripe";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.835);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -26%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .stripe::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .projectPage::before {
-                  display: none;
-                  content: "Take a look!";
-                  font-size: 12px;
-                  background: rgba(151, 151, 151, 0.848);
-                  padding: 4px;
-                  border-radius: 2px;
-                  margin-bottom: 3px;
-                  position: absolute;
-                  top: -63%;
-                  left: -73%;
-                  transition: transform 0.3s ease;
-                  width: max-content;
-                }
-                .projectPage::after {
-                  display: none;
-                  content: "";
-                  position: absolute;
-                  left: 6.7%;
-                  top: -13%;
-                  // transform: translateX(-50%);
-                  transform: rotate(180deg);
-                  border-width: 8px;
-                  border-style: solid;
-                }
-                .dock_imgContainer:hover {
-                  transition: transform 0.2s ease-in-out;
-                  transform: translateY(-10px);
-                  &::before {
-                    display: block;
-                    top: -90%;
-                    background: rgba(255, 255, 255, 0.731);
-                    color: rgb(0, 0, 0);
-                    font-weight: 500;
-                    // left: -11%;
-                  }
-                  &::after {
-                    display: block;
-                    top: -26%;
-                    left: 28%;
-                    border-color: transparent transparent
-                      rgba(255, 255, 255, 0.731) transparent;
-                  }
+                .lid {
+                  width: 120px;
+                  height: 10px;
+                  background-color: red;
+                  margin: 0 auto;
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+                  background: rgba(234, 234, 234, 1);
+                  background: -moz-linear-gradient(
+                    top,
+                    rgba(234, 234, 234, 1) 0%,
+                    rgba(186, 186, 186, 1) 77%,
+                    rgba(120, 120, 120, 1) 100%
+                  );
+                  background: -webkit-gradient(
+                    left top,
+                    left bottom,
+                    color-stop(0%, rgba(234, 234, 234, 1)),
+                    color-stop(77%, rgba(186, 186, 186, 1)),
+                    color-stop(100%, rgba(120, 120, 120, 1))
+                  );
+                  background: -webkit-linear-gradient(
+                    top,
+                    rgba(234, 234, 234, 1) 0%,
+                    rgba(186, 186, 186, 1) 77%,
+                    rgba(120, 120, 120, 1) 100%
+                  );
+                  background: -o-linear-gradient(
+                    top,
+                    rgba(234, 234, 234, 1) 0%,
+                    rgba(186, 186, 186, 1) 77%,
+                    rgba(120, 120, 120, 1) 100%
+                  );
+                  background: -ms-linear-gradient(
+                    top,
+                    rgba(234, 234, 234, 1) 0%,
+                    rgba(186, 186, 186, 1) 77%,
+                    rgba(120, 120, 120, 1) 100%
+                  );
+                  background: linear-gradient(
+                    to bottom,
+                    rgba(234, 234, 234, 1) 0%,
+                    rgba(186, 186, 186, 1) 77%,
+                    rgba(120, 120, 120, 1) 100%
+                  );
+                  // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#787878', GradientType=0);
                 }
               }
-
-              /********* DOCK ICONS ***********/
-
-              .search1 {
-                background-color: rgba(204, 0, 102, 0);
-                border: 1.5px solid #474747;
-                width: 7px;
-                height: 7px;
-                border-radius: 100%;
-                position: relative;
-                top: -26px;
-                left: 500px;
-              }
-
-              .search2 {
-                width: 1.3px;
-                height: 6px;
-                background-color: #474747;
-                position: relative;
-                top: -28px;
-                left: 508px;
-                transform: rotate(135deg);
-              }
-
-              .dash1 {
-                width: 12px;
-                height: 1px;
-                background-color: #474747;
-                position: relative;
-                top: -39px;
-                left: 520px;
-              }
-
-              .dash2 {
-                width: 9px;
-                height: 1px;
-                background-color: #474747;
-                position: relative;
-                top: -37px;
-                left: 520px;
-              }
-
-              .dash3 {
-                width: 12px;
-                height: 1px;
-                background-color: #474747;
-                position: relative;
-                top: -35px;
-                left: 520px;
-              }
-
-              .battery {
-                width: 17px;
-                height: 9px;
-                background-color: rgba(204, 0, 102, 0);
-                border: 1px solid #474747;
-                position: relative;
-                top: -41.5px;
-                left: 445px;
-                border-top-left-radius: 2px;
-                border-top-right-radius: 2px;
-                border-bottom-left-radius: 2px;
-                border-bottom-right-radius: 2px;
-              }
-
-              .battery-inside {
-                width: 15px;
-                height: 5.5px;
-                background-color: #474747;
-                position: absolute;
-                top: 1.5px;
-                left: 446px;
-                border-top-left-radius: 2px;
-                border-top-right-radius: 2px;
-                border-bottom-left-radius: 2px;
-                border-bottom-right-radius: 2px;
-                border-bottom: 0.5px solid #474747;
-              }
-
-              .battery-tip {
-                background-color: #474747;
-                width: 2.3px;
-                height: 6px;
-                border-bottom-right-radius: 50px;
-                border-top-right-radius: 50px;
-                position: relative;
-                top: -49px;
-                left: 462.5px;
-              }
-
-              .battery-perc {
-                font-family: "Roboto", sans-serif;
-                font-size: 9px;
-                position: absolute;
-                background-color: whitesmoke;
-                top: -0.9px;
-                left: 414px;
-              }
-
-              .time-os {
-                background-color: whitesmoke;
-                color: #474747;
-                display: inline;
-                margin: 0 auto;
-                font-size: 11px;
-                position: relative;
-                top: -13px;
-                left: 470px;
-                font-family: "Roboto", sans-serif;
-              }
-              .menu {
-                font-family: "Roboto", sans-serif;
-                font-size: 9px;
-                position: absolute;
-                word-spacing: 8px;
-                top: 3px;
-                left: 25px;
-                background-color: whitesmoke;
-              }
-
-              .safari-window {
-                width: 547px;
-                height: 341px;
-                position: absolute;
-                top: 15px;
-                // filter: opacity(0.9);
-                object-fit: inherit;
-                border-radius: 0;
-                object-position: center;
+              //* Mac Design until here *//
+              //* Mobile Design*//
+              .containerIphone {
+                display: none;
               }
             }
           }
