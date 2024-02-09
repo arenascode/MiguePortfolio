@@ -922,8 +922,6 @@ body {
       align-items: center;
       .headingFour {
         display: flex;
-        padding: 0.625rem;
-        // margin: auto;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
@@ -941,8 +939,7 @@ body {
         //line
         width: 16.438rem;
         height: 0.0625rem;
-        background: var(--color-separator);
-        border: 0.5px #5e5e5e solid;
+        border: 0.5px var(--color-separator) solid;
         margin-left: 0.8rem;
         margin-bottom: 1rem;
       }
@@ -1609,8 +1606,7 @@ body {
         //line
         width: 16.438rem;
         height: 0.0625rem;
-        background: var(--color-text);
-        border: 0.5px #ffffff solid;
+        border: 0.5px var(--color-separator) solid;
         margin: auto;
         margin-bottom: 1rem;
       }
@@ -1981,8 +1977,7 @@ body {
         //line
         width: 16.438rem;
         height: 0.0625rem;
-        background: var(--color-separator);
-        border: 0.5px #5e5e5e solid;
+        border: 0.5px var(--color-separator) solid;
         margin-left: 0.8rem;
         margin-bottom: 1rem;
       }
@@ -2522,7 +2517,7 @@ body {
       .headingTwo {
         display: flex;
         padding: 0.625rem;
-        // margin: auto;
+        margin: 1rem auto 0.5rem;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
@@ -2571,6 +2566,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 2rem;
       margin-bottom: 15px;
       box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.206);
       background: rgba(51, 48, 65, 0.54);
@@ -2588,12 +2584,12 @@ body {
       }
       .about_techStackList {
         // layout
-        width: 100vw;
+        width: 100%;
         display: flex;
         margin-top: 3rem;
         gap: 3rem;
-        padding: 0 5rem;
-        justify-content: space-between;
+        padding: 0 1rem;
+        justify-content: space-around;
         flex-wrap: nowrap;
         li {
           //layout
@@ -2666,7 +2662,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding-top: 3rem;
+      padding-top: 1rem;
       gap: 3rem;
       align-self: stretch;
       width: 100%;
