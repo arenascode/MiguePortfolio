@@ -1169,7 +1169,7 @@ body {
   }
   #hero {
     display: flex;
-    padding: 1.5625rem 16.875rem;
+    padding: 1.5625rem 6rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1225,7 +1225,7 @@ body {
     }
     .heroCTAs {
       margin: auto;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       display: flex;
       width: 29.0625rem;
       justify-content: center;
@@ -1371,6 +1371,7 @@ body {
       background: rgba(51, 48, 65, 0.54);
       border-radius: 7px;
       max-width: 100%;
+      padding: 2rem;
       .stack {
         display: flex;
         flex-direction: column;
@@ -1385,11 +1386,12 @@ body {
       }
       .about_techStackList {
         // layout
-        width: 100vw;
+        width: 100%;
         display: flex;
         margin-top: 3rem;
         gap: 3rem;
-        padding: 0 2.5rem;
+        padding-left: 0;
+        // padding: 0 2.5rem;
         justify-content: center;
         flex-wrap: wrap;
         li {
