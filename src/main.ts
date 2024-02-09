@@ -93,6 +93,7 @@ window.onclick = function (e) {
 //     document.body.style.paddingTop = '0'
 //   }
 // }
+
 // ** Send Contact Message to Server **//
 
 const form: HTMLFormElement = document.querySelector("form") as HTMLFormElement;
@@ -178,12 +179,13 @@ const dockImgs: NodeList = document.querySelectorAll(".dock_imgContainer");
 function handleAppJumps(e: Event) {
   e.preventDefault();
   for (let i = 0; i <= 8; i++) {
-    console.log(`holiii`);
-    const imgContainer: HTMLDivElement = this;
-    const redirectUrl = imgContainer.querySelector('a')?.getAttribute('href') as string
-    imgContainer.classList.add("softJumps");
+    const target = e.target as HTMLDivElement;
+    const imgContainer = target.parentNode?.parentNode as HTMLDivElement;
+    
+    const redirectUrl = imgContainer?.querySelector('a')?.getAttribute('href') as string
+    imgContainer?.classList.add("softJumps");
     setTimeout(() => {
-      imgContainer.classList.remove("softJumps");
+      imgContainer?.classList.remove("softJumps");
       window.open(redirectUrl, '_blank')
     }, 700);
   }
