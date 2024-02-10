@@ -640,19 +640,21 @@ body {
                     position: relative;
                     display: inline-block;
                     overflow: hidden;
-                    width: 95.5%;
+                    width: 96%;
                     height: 97%;
                     border-radius: 34px;
                     padding-left: 15px;
-                    padding-right: 3px;
+                    padding-right: 2.5px;
                     padding-top: 14.5px;
                     z-index: 2;
+                    overflow: hidden;
                     img {
                       display: block;
                       width: 100%;
                       height: 100%;
                       object-fit: fill;
-                      border-radius: 28px;
+                      border-radius: 30px;
+                      overflow: hidden;
                     }
                     .projectDescription {
                       position: absolute;
@@ -763,13 +765,13 @@ body {
                     position: relative;
                     overflow: hidden;
                     width: 97%;
-                    height: 97%;
-                    border-radius: 38px;
-                    margin-top: 1px;
-                    padding-right: 6.5px;
+                    height: 98%;
+                    border-radius: 30px;
+                    // padding-right: 3px;
+                    padding-right: 6px;
                     margin-right: 5px;
-                    // padding-top: 12px;
-                    padding-bottom: 1.5px;
+                    margin-top: -0.5px;
+                    padding-bottom: 1.5%;
 
                     .btn-project {
                       width: fit-content;
@@ -779,10 +781,13 @@ body {
                       column-gap: 15px;
                       opacity: 1;
                       border-radius: 28px;
-                      margin-left: 5px;
+                      margin-left: 1.5%;
                       margin-right: 14px;
                       padding-top: 14px;
                       padding-right: 9px;
+                      margin-top: 5px;
+                      width: 93%;
+                      height: 96%;
                     }
                   }
                   .screenProject3 {
@@ -800,6 +805,36 @@ body {
                     }
                     .btn-project {
                       margin-top: 90px;
+                    }
+                  }
+                  .screenProject4 {
+                    // @extend .screen;
+                    position: relative;
+                    overflow: hidden;
+                    width: 97%;
+                    height: 98%;
+                    border-radius: 30px;
+                    // padding-right: 3px;
+                    padding-right: 6px;
+                    margin-right: 5px;
+                    margin-top: -0.5px;
+                    padding-bottom: 1.5%;
+
+                    .btn-project {
+                      width: fit-content;
+                      margin-top: 55px;
+                    }
+                    &:hover .projectDescription4 {
+                      column-gap: 15px;
+                      opacity: 1;
+                      border-radius: 28px;
+                      margin-left: 1.5%;
+                      margin-right: 14px;
+                      padding-top: 14px;
+                      padding-right: 9px;
+                      margin-top: 5.4px;
+                      width: 93%;
+                      height: 96%;
                     }
                   }
                 }

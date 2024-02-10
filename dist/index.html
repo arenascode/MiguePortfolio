@@ -701,6 +701,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  #projects .projectsGrid .projectsFrame .projectCard .projectCard_img .cardImg .containerIphone .iphone-border .screen:hover .projectDesc3, #projects .projectsGrid .projectsFrame .projectCard .projectCard_img .cardImg .containerIphone .iphone-border .screen:hover .projectDesc4 {
+    width: 94%;
+    margin-left: 6px;
+  }
   #projects .projectsGrid .projectsFrame .projectCard .projectCard_img .cardImg .containerIphone .iphone-border .screenProject2 {
     position: relative;
     overflow: hidden;
@@ -3353,7 +3357,7 @@ body {
       type="image/x-icon"
     />
     <title>MiguePortfolio</title>
-    <script type="module" crossorigin src="https://arenascode.github.io/miguePortfolio/assets/index-65ff1018.js"></script>
+    <script type="module" crossorigin src="https://arenascode.github.io/miguePortfolio/assets/index-6466c773.js"></script>
   </head>
   <body>
     <nav id="navBar">
@@ -3363,8 +3367,8 @@ body {
       <div class="navBar_Desktop">
         <ul class="linksMenu">
           <li><a href="#navBar">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about_heading">About</a></li>
+          <li><a href="#projects_heading">Projects</a></li>
           <li><a class="contactMeBtn" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -3375,8 +3379,8 @@ body {
           </button>
           <ul class="linksMenu">
             <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about_heading">About</a></li>
+            <li><a href="#projects_heading">Projects</a></li>
             <li><a class="contactMeBtn" href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -3389,8 +3393,8 @@ body {
       <section id="hero">
         <div class="heroContent">
           <div class="heroText">
-            <div class="heroTitle">
-              Miguel Arenas <small>Licenciado en Administración</small>
+            <div class="heroTitle" id="hero_heading">
+              Miguel Arenas <small>Bachelor's degree in Business Administration (UBA)</small>
               <small>FullStack Web Developer</small>
             </div>
             <div class="separator"></div>
@@ -3409,7 +3413,7 @@ body {
         </div>
       </section>
       <section id="about">
-        <div class="about_heading">
+        <div class="about_heading" id="about_heading">
           <h2 class="headingTwo">About</h2>
           <div class="separator"></div>
         </div>
@@ -3477,8 +3481,8 @@ body {
         </div>
       </section>
       <section id="projects">
-        <div class="projects_heading">
-          <h2 class="headingThree">Projects</h2>
+        <div class="projects_heading" >
+          <h2 class="headingThree" id="projects_heading">Projects</h2>
           <div class="separator"></div>
         </div>
         <div class="projectsGrid">
@@ -3601,7 +3605,7 @@ body {
                         />
                         <div class="projectDescription">
                           <div class="cardProjectLinks">
-                            <h3>Conoce el Proyecto</h3>
+                            <h3>Get to know the project</h3>
                             <div class="linksProject">
                               <!-- Link Github -->
                               <a
@@ -3668,20 +3672,16 @@ body {
                 </div>
               </div>
               <div class="project_textContent">
-                <div class="cardHeading">Portafolio para Actriz</div>
+                <div class="cardHeading">Portfolio for Actress</div>
                 <div class="separator"></div>
                 <div class="cardBody">
                   <p>
-                    Un viaje a través del arte y la actuación. Explora el
-                    fascinante mundo de Alejandra en su portafolio interactivo.
+                   A journey through art and acting. Explore the fascinating world of Alejandra in her Portfolio.
+                  <p>
+                    Find out how we combine HTML, CSS, JS and Bootstrap to bring her online presence to life.
                   </p>
                   <p>
-                    Descubre cómo combinamos HTML, CSS, JS y Bootstrap para dar
-                    vida a su presencia en línea.
-                  </p>
-                  <p>
-                    Diseñado para brillar en dispositivos móviles, tabletas y
-                    computadoras de escritorio.
+                    Mobile-first design and adapted for tablets and desktop devices.
                   </p>
                 </div>
                 <div class="cardTechStack">
@@ -3851,7 +3851,7 @@ body {
                         />
                         <div class="projectDescription">
                           <div class="cardProjectLinks">
-                            <h3>Conoce el Proyecto</h3>
+                            <h3>Get to know the project</h3>
                             <div class="linksProject">
                               <!-- Link Github -->
                               <a
@@ -3927,21 +3927,16 @@ body {
                 <div class="separator"></div>
                 <div class="cardBody">
                   <p>
-                    Implementación de hooks de React para una experiencia de
-                    compra fluida.
+                    UseState, UseEffect, useContext, useQuery and other hooks used to build the user Interface with ReactJs and Tailwind.
                   </p>
                   <p>
-                    Infraestructura robusta en el back-end con Node.js y
-                    Express.
+                    Robust infrastructure on the backend with Node.Js, Express and MongoDB.
                   </p>
                   <p>
-                    Integración de funciones esenciales como login,
-                    autenticación segura y envío de correos electrónicos en una
-                    estructura MVC.
+                    Register, login, mailing, password recovery and secure authentication with JWT through signed cookies. MVC structure and payment gateway with Stripe.
                   </p>
                   <p>
-                    Experiencia de compra sin complicaciones respaldada por
-                    MongoDB.
+                    Unit and functional testing. Documentation with Swagger.
                   </p>
                 </div>
                 <div class="cardTechStack">
@@ -4101,9 +4096,9 @@ body {
                           src="https://arenascode.github.io/miguePortfolio/assets/clausDeliveryBags-mobile-94041732.png"
                           alt=""
                         />
-                        <div class="projectDescription">
+                        <div class="projectDescription projectDesc3">
                           <div class="cardProjectLinks">
-                            <h3>Conoce el Proyecto</h3>
+                            <h3>Get to know the project</h3>
                             <div class="linksProject">
                               <!-- Link Github -->
                               <a
@@ -4172,19 +4167,15 @@ body {
               </div>
               <div class="project_textContent">
                 <div class="cardHeading">
-                  Landing page for Christmas entrepreneurship
+                  Landing Page for Sales
                 </div>
                 <div class="separator"></div>
                 <div class="cardBody">
                   <p>
-                    Descubre la magia de la navidad a través de mi último
-                    proyecto: una cautivadora landing page para venta de
-                    artículos navideños.
+                    Discover the Christmas magic through one of my latest projects: a pretty product sale landing page for the end of the year season.
                   </p>
                   <p>
-                    La página resalta la versatilidad y adaptabilidad al
-                    funcionar sin problemas en dispositivos móviles, tabletas y
-                    computadoras de escritorio.
+                    The landing page results in the versatility and adaptability to work seamlessly on mobile devices, tablets and desktops in order to be able to shop anywhere.
                   </p>
                 </div>
                 <div class="cardTechStack">
@@ -4312,9 +4303,9 @@ body {
                           src="https://arenascode.github.io/miguePortfolio/assets/tipCalculator-mobile-9b90931d.png"
                           alt=""
                         />
-                        <div class="projectDescription">
+                        <div class="projectDescription projectDesc4">
                           <div class="cardProjectLinks">
-                            <h3>Conoce el Proyecto</h3>
+                            <h3>Get to know the project</h3>
                             <div class="linksProject">
                               <!-- Link Github -->
                               <a
@@ -4386,10 +4377,10 @@ body {
                 <div class="separator"></div>
                 <div class="cardBody lastChildCardBody">
                   <p>
-                    Calculadora de propina, diseñada con un enfoque
-                    'mobile-first', utilizando técnicas avanzadas como CSS Grid
-                    y Flexbox. Esta herramienta te permite calcular fácilmente
-                    la propina y el total de la cuenta por persona.
+                    Tip calculator, designed with focus on "mobile-first" using advanced techniques such as CSS Grid and Flexbox.
+                  </p>
+                  <p>
+                    This tool allows you to easily calculate the tips and the total amount of the bill per person.
                   </p>
                 </div>
                 <div class="cardTechStack">
@@ -4422,12 +4413,12 @@ body {
         <form class="contactForm">
           <div class="frameForm1">
             <div class="inputBox">
-              <label for="name">Nombre</label>
+              <label for="name">Name</label>
               <input
                 type="text"
                 name="name"
                 id="name"
-                placeholder="Tu Nombre"
+                placeholder="Your Name"
                 required
               />
             </div>
@@ -4450,7 +4441,7 @@ body {
                 id="message"
                 cols="30"
                 rows="10"
-                placeholder="Deja aqui tu mensaje"
+                placeholder="Leave your message here"
               ></textarea>
               <!-- <input
                 type="text"
