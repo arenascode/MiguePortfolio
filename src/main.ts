@@ -93,6 +93,11 @@ window.onclick = function (e) {
 //     document.body.style.paddingTop = '0'
 //   }
 // }
+//** Close Modal in mobile after select a link *//
+
+const modalLinks = document.querySelectorAll('.navBarModal .linksMenu a')
+
+modalLinks.forEach(modalLink => modalLink.addEventListener('click', closeModal))
 
 // ** Send Contact Message to Server **//
 
