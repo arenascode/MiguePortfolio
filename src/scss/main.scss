@@ -753,6 +753,10 @@ body {
                       left: 50%;
                       transform: translate(-50%, -50%);
                     }
+                    &:hover .projectDesc3, &:hover .projectDesc4 {
+                      width: 94%;
+                      margin-left:6px;
+                    }
                   }
                   .screenProject2 {
                     // @extend .screen;
