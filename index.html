@@ -25,6 +25,7 @@
 }
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   font-family: var(--Font-Inter);
@@ -1765,7 +1766,6 @@ body {
     gap: 0.625rem;
     align-self: stretch;
     font-size: 1.5rem;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
   }
@@ -3153,7 +3153,7 @@ body {
     display: none;
   }
   #projects .projectsGrid .projectsFrame .projectCard .project_textContent {
-    width: 430px;
+    width: 450px;
     padding: 1rem;
   }
   #projects .projectsGrid .projectsFrame .projectCard .project_textContent .cardHeading {
@@ -3181,16 +3181,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   #projects .projectsGrid .projectsFrame .projectCard .project_textContent .cardBody p {
-    font-style: normal;
+    width: 100%;
+    font-size: 1.3rem;
     font-weight: 400;
     line-height: 25px;
     text-wrap: pretty;
+    margin: 0.4rem 0;
   }
   #projects .projectsGrid .projectsFrame .projectCard .project_textContent .lastChildCardBody {
-    height: 11.5rem;
     align-items: start;
   }
   #projects .projectsGrid .projectsFrame .projectCard .project_textContent .lastChildCardBody p {
@@ -4111,7 +4112,7 @@ body {
                           </div>
                           <div class="projectPage dock_imgContainer">
                             <a
-                              href="https://arenascode.github.io/ClausDeliveryBags/"
+                              href="https://www.clausbags.com"
                             >
                               <img
                                 src="https://arenascode.github.io/miguePortfolio/assets/sitio-web-11828125.png"
@@ -4290,17 +4291,41 @@ body {
                               />
                             </a>
                           </div>
-                          <div class="js dock_imgContainer">
-                            <a href="https://www.javascript.com/">
+                          <div class="ts dock_imgContainer">
+                            <a href="https://www.typescriptlang.org/">
                               <img
-                                src="https://arenascode.github.io/miguePortfolio/assets/js-30558d7e.png"
-                                class="lunchpad img-size"
+                                src="https://arenascode.github.io/miguePortfolio/assets/ts-ec8c905f.png"
+                                class="ts img-size"
+                              />
+                            </a>
+                          </div>
+                          <div class="react dock_imgContainer">
+                            <a href="https://react.dev/">
+                              <img
+                                src="https://arenascode.github.io/miguePortfolio/assets/react-9ea4f4da.png"
+                                class="react img-size"
+                              />
+                            </a>
+                          </div>
+                          <div class="nodeJs dock_imgContainer">
+                            <a href="https://nodejs.org/en">
+                              <img
+                                src="https://arenascode.github.io/miguePortfolio/assets/nodeJs-c310e885.png"
+                                class="nodeJS img-size"
+                              />
+                            </a>
+                          </div>
+                          <div class="mysql dock_imgContainer">
+                            <a href="https://www.mysql.com/">
+                              <img
+                                src="https://arenascode.github.io/miguePortfolio/assets/mysql-8dbe17e1.png"
+                                class="img-size"
                               />
                             </a>
                           </div>
                           <div class="github dock_imgContainer">
                             <a
-                              href="https://github.com/arenascode/tipCalculator"
+                              href="https://github.com/arenascode/socialMediaClone-UI"
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -4317,9 +4342,7 @@ body {
                             </a>
                           </div>
                           <div class="projectPage dock_imgContainer">
-                            <a
-                              href="https://arenascode.github.io/tipCalculator"
-                            >
+                            <a href="https://github.com/arenascode/socialMediaClone-UI">
                               <img
                                 src="https://arenascode.github.io/miguePortfolio/assets/sitio-web-11828125.png"
                                 alt=""
@@ -4329,7 +4352,7 @@ body {
                           </div>
                         </div>
                         <img
-                          src="https://arenascode.github.io/miguePortfolio/assets/tipCalculator-2cc7a16e.png"
+                          src="https://arenascode.github.io/miguePortfolio/assets/socialMediaDesktop-925545bb.png"
                           class="safari-window"
                           style="filter: opacity(0.8)"
                         />
@@ -4345,7 +4368,7 @@ body {
                     <div id="project4" class="iphone-border">
                       <div class="screen screenProject4">
                         <img
-                          src="https://arenascode.github.io/miguePortfolio/assets/tipCalculator-mobile-9b90931d.png"
+                          src="https://arenascode.github.io/miguePortfolio/assets/SocialMediaMobile-84cf1cae.png"
                           alt=""
                         />
                         <div class="projectDescription projectDescription4">
@@ -4418,15 +4441,15 @@ body {
                 </div>
               </div>
               <div class="project_textContent">
-                <div class="cardHeading">Tip Calculator</div>
+                <div class="cardHeading">Social Media Clone</div>
                 <div class="separator"></div>
                 <div class="cardBody lastChildCardBody">
                   <p>
-                    Tip calculator, designed with focus on "mobile-first" using advanced techniques such as CSS Grid and Flexbox.
-                  </p>
-                  <p>
-                    This tool allows you to easily calculate the tips and the total amount of the bill per person.
-                  </p>
+  A fully-featured social media clone, built with a focus on user interaction and seamless functionality. 
+</p>
+<p>
+  This platform includes post creation, comments, likes, user profiles, and real-time chat, designed to deliver a smooth and engaging social experience.
+</p>
                 </div>
                 <div class="cardTechStack">
                   <h3>Built With</h3>
@@ -4527,7 +4550,7 @@ body {
           <a href="mailto:migue.arenas91@gmail.com">
             <img src="https://arenascode.github.io/miguePortfolio/assets/email-0955d8be.png" alt="email" />
           </a>
-          <a href="">
+          <a download href="src/assets/CV-MiguelArenas.pdf">
             <img src="https://arenascode.github.io/miguePortfolio/assets/curriculum-vitae-70fd9e05.png" alt="cv" />
           </a>
         </div>
