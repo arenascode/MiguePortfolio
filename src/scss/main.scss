@@ -21,7 +21,9 @@
 }
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 body {
   font-family: var(--Font-Inter);
   background: rgb(51, 48, 65);
@@ -1920,7 +1922,7 @@ body {
               align-self: stretch;
               //typography
               font-size: 1.5rem;
-              font-style: normal;
+              // font-style: normal;
               font-weight: 500;
               line-height: normal;
             }
@@ -3557,7 +3559,7 @@ body {
             }
           }
           .project_textContent {
-            width: 430px;
+            width: 450px;
             padding: 1rem;
             .cardHeading {
               display: flex;
@@ -3585,8 +3587,7 @@ body {
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              margin-top: 2rem;
-
+              margin-top: 1rem;
               // ul {
               //   display: flex;
               //   flex-direction: column;
@@ -3603,14 +3604,16 @@ body {
               // }
               p {
                 // font-size: 1rem;
-                font-style: normal;
+                width: 100%;
+                font-size: 1.3rem;
                 font-weight: 400;
                 line-height: 25px;
                 text-wrap: pretty;
+                margin: 0.4rem 0
               }
             }
             .lastChildCardBody {
-              height: 11.5rem;
+              // height: 11.5rem;
               align-items: start;
               p {
                 vertical-align: top;
